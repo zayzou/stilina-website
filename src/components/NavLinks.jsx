@@ -13,7 +13,10 @@ function NavLinks() {
     <>
       {links.map(({ id, url, text }) => (
         <li key={id}>
-          <NavLink className="capitalize" to={url}>
+          <NavLink
+            className="capitalize px-5 py-3 text-sm tracking-wider  rounded-full hover:shadow-2xl "
+            to={url}
+          >
             {text}
           </NavLink>
         </li>

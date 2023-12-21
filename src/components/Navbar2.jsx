@@ -7,14 +7,14 @@ import NavLinks from "./NavLinks";
 
 const themes = {
   winter: "light",
-  dracula: "dark",
+  dracula: "dracula",
 };
 
 const getThemeFromLocalStorage = () => {
   return localStorage.getItem("theme") || themes.winter;
 };
 
-function Navbar() {
+function Navbar2() {
   const [theme, setTheme] = useState(getThemeFromLocalStorage());
 
   const toggleTheme = () => {
@@ -26,11 +26,18 @@ function Navbar() {
     document.documentElement.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
   }, [theme]);
-
   return (
-    <div className="bg-base-100">
-      <nav className="navbar align-element shadow-2xl rounded-full">
+    <nav className="bg-base-100">
+      <div className="navbar align-element">
         <div className="navbar-start">
+          {/* Title */}
+          <NavLink
+            to="/"
+            className="hidden lg:flex btn btn-primary text-3xl items-center "
+          >
+            S
+          </NavLink>
+          {/* DROPDOWN */}
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
               <FaBarsStaggered className="h-6 w-6" />
@@ -39,14 +46,13 @@ function Navbar() {
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
+              {" "}
               <NavLinks />
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">Stilina</a>
         </div>
-
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="menu menu-horizontal">
             <NavLinks />
           </ul>
         </div>
@@ -71,9 +77,9 @@ function Navbar() {
             </div>
           </NavLink>
         </div>
-      </nav>
-    </div>
+      </div>
+    </nav>
   );
 }
 
-export default Navbar;
+export default Navbar2;
