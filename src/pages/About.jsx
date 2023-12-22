@@ -2,6 +2,8 @@ import { BsArrowRight } from "react-icons/bs";
 import Lottie from "lottie-react";
 import animationData from "../assets/animation02.json";
 import pen from "../assets/images/pen.png";
+import history from "../assets/images/history.jpeg";
+
 const About = () => {
   return (
     <div className="grid grid-rows-1 gap-6 ">
@@ -38,7 +40,7 @@ const About = () => {
       </div>
 
       <div
-        className="scroll-mt-16 bg-base-300 shadow-xl rounded-3xl min-h-[55vh] grid gap-2"
+        className="scroll-mt-16   rounded-3xl min-h-[55vh] grid gap-2"
         id="valeurs"
       >
         <div className="card lg:card-side">
@@ -61,7 +63,25 @@ const About = () => {
         </div>
       </div>
 
-      <div className="scroll-mt-12" id="histoire">
+      <div
+        className="scroll-mt-12 minh-[100vh] bg-base-200 rounded-xl"
+        id="histoire"
+      >
+        <div className="card lg:card-side">
+          <figure className="basis-1/4">
+            <img className="grayscale" src={history} alt="history" />
+          </figure>
+          <div className="card-body basis-3/4">
+            <h2 className="card-title">Notre histoire</h2>
+            <p>
+              C’est en 1918 que furent créés au Japon les premiers stylos PILOT,
+              par deux ingénieurs maritimes japonais, Ryosuke Namiki et Masao
+              Wada qui travaillaient en mer sur un navire marchand. En hommage à
+              la mer, leur passion commune, les deux associés donnèrent à la
+              marque le nom de PILOT, une référence au vaisseau amiral.
+            </p>
+          </div>
+        </div>
         <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical ">
           <li>
             <div className="timeline-middle">
@@ -141,6 +161,31 @@ const About = () => {
               courant.
             </div>
             <hr />
+          </li>
+          <li>
+            <hr />
+            <div className="timeline-middle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                className="h-5 w-5"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </div>
+            <div className="timeline-end mb-10">
+              <time className="font-mono italic">2012</time>
+              <div className="text-lg font-black">
+                Restructuration et Création de la Sarl Madani Scolaire et Bureau
+              </div>
+              La Sarl Madani Scolaire et Bureau est créée en 2012 à la suite de
+              la restructuration de la GMC.
+            </div>
           </li>
         </ul>
       </div>
