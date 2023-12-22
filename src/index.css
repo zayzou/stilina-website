@@ -8,6 +8,9 @@
   }
 }
 
-.debug {
-  border: "1px red solid";
+.debug-red {
+  border: 1px red solid !important;
+}
+.debug-blue {
+  border: 1px blue !important;
 }
