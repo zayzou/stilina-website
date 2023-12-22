@@ -30,21 +30,24 @@ const About = () => {
             1992 jusqu'à sa dissolution en 2012, la <strong>GMC</strong>, connue
             pour sa marque, a occupé une place de premier plan sur le marché.
           </p>
-          <a href="#histoire" className="mt-4 btn btn-neutral ">
+          <a href="#valeurs" className="mt-4 btn btn-neutral ">
             Nos valeurs
             <BsArrowRight />
           </a>
         </div>
       </div>
 
-      <div className="bg-base-100 shadow-xl rounded-3xl min-h-[55vh] grid gap-2">
+      <div
+        className="scroll-mt-16 bg-base-300 shadow-xl rounded-3xl min-h-[55vh] grid gap-2"
+        id="valeurs"
+      >
         <div className="card lg:card-side">
           <div className="card-body basis-3/4 grid gap-2 font-title text-center text-[clamp(2rem,8vw,4rem)] font-black leading-none xl:text-start">
             <h4>Innovation</h4>
             <h4 className="bg-[linear-gradient(90deg,theme(colors.error)_0%,theme(colors.secondary)_9%,theme(colors.secondary)_42%,theme(colors.primary)_47%,theme(colors.accent)_100%)] bg-clip-text will-change-auto [transform:translate3d(0,0,0)] [-webkit-text-fill-color:transparent] motion-reduce:!tracking-normal max-[1279px]:!tracking-normal [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]">
               Qualité assurée
             </h4>
-            <h4>Relation</h4>
+            <h4 className="">Relation</h4>
           </div>
           <figure>
             <img src={pen} alt="" className="bg-neutral rounded-s-3xl " />
@@ -138,61 +141,6 @@ const About = () => {
               courant.
             </div>
             <hr />
-          </li>
-          <li>
-            <hr />
-            <div className="timeline-middle">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                className="h-5 w-5"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </div>
-            <div className="timeline-end mb-10">
-              <time className="font-mono italic">2007</time>
-              <div className="text-lg font-black">iPhone</div>
-              iPhone is a line of smartphones produced by Apple Inc. that use
-              Apple's own iOS mobile operating system. The first-generation
-              iPhone was announced by then-Apple CEO Steve Jobs on January 9,
-              2007. Since then, Apple has annually released new iPhone models
-              and iOS updates. As of November 1, 2018, more than 2.2 billion
-              iPhones had been sold. As of 2022, the iPhone accounts for 15.6%
-              of global smartphone market share
-            </div>
-            <hr />
-          </li>
-          <li>
-            <hr />
-            <div className="timeline-middle">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                className="h-5 w-5"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </div>
-            <div className="timeline-start md:text-end mb-10">
-              <time className="font-mono italic">2017</time>
-              <div className="text-lg font-black">
-                Proximité avec les Clients
-              </div>
-              réation d'un magasin de vente en gros en papeterie, bureautique et
-              informatique à Draa-El-Mizan, chef-lieu de Daira, pour mieux
-              servir les clients et être plus proche du marché.
-            </div>
           </li>
         </ul>
       </div>
