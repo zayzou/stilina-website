@@ -3,8 +3,41 @@ import Lottie from "lottie-react";
 import animationData from "../assets/animation02.json";
 import pen from "../assets/images/pen.png";
 import history from "../assets/images/history.jpeg";
-
+import exportation from "../assets/images/exportation.jpeg";
+import production from "../assets/images/production.jpeg";
+import retail from "../assets/images/retail.jpeg";
+import international from "../assets/images/international.jpeg";
 const About = () => {
+  const services = [
+    {
+      id: 1,
+      title: "Production",
+      image: production,
+      description:
+        "STILINA est spécialisée dans la production d'articles scolaires. Nous nous approvisionnons auprès de fournisseurs de matériaux de qualité afin de garantir l'excellence de nos produits.",
+    },
+    {
+      id: 2,
+      title: "Exportation",
+      image: exportation,
+      description:
+        "STILINA a commencé à exporter dès l’année 2007. Depuis, l’entreprise a étendu sa présence dans sept pays, et ses produits sont en cours d’enregistrement dans de nombreux autres.",
+    },
+    {
+      id: 3,
+      title: "Présence nationale",
+      image: retail,
+      description:
+        "Afin de mieux nous rapprocher de nos clients et du marché en général, nous avons créé un magasin de vente en gros en papetrie, bureautique et informatique,	 sis à notre chef lieu de Daira de Draa-El-Mizan.",
+    },
+    {
+      id: 4,
+      title: "Présence International",
+      image: international,
+      description:
+        "STILINA se distingue en tant que représentant exclusif de plusieurs marques mondiales de renom, garantissant ainsi l'accès à des produits de qualité exceptionnelle",
+    },
+  ];
   return (
     <div className="grid grid-rows-1 gap-6 ">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 min-h-[75vh]">
@@ -38,9 +71,8 @@ const About = () => {
           </a>
         </div>
       </div>
-
       <div
-        className="scroll-mt-16   rounded-3xl min-h-[55vh] grid gap-2"
+        className="scroll-mt-16 rounded-3xl min-h-[55vh] grid gap-2"
         id="valeurs"
       >
         <div className="card lg:card-side">
@@ -62,7 +94,6 @@ const About = () => {
           </a>
         </div>
       </div>
-
       <div
         className="scroll-mt-12 minh-[100vh] bg-base-200 rounded-xl"
         id="histoire"
@@ -188,6 +219,28 @@ const About = () => {
             </div>
           </li>
         </ul>
+      </div>
+
+      <div className="carousel carousel-center rounded-box">
+        {services.map(({ id, title, image, description }) => {
+          return (
+            <div className="carousel-item " key={id}>
+              <figure className="relative max-w-sm ">
+                <img
+                  className="min-h-[100%] w-[20rem]  bg-white/30 transition-all duration-300 cursor-pointer brightness-50 filter hover:brightness-100"
+                  src={image}
+                  alt={title}
+                />
+                <figcaption className="absolute px-4 text-md text-white top-6">
+                  <h1 className="font-title text-4xl text-center  font-black leading-none xl:text-start mb-4">
+                    {title}
+                  </h1>
+                  <p>{description}</p>
+                </figcaption>
+              </figure>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
