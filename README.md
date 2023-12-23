@@ -1068,7 +1068,7 @@ export default About;
   - Import `Link` from `'react-router-dom'`.
 
 - Hero Component:
-  - Define the `Hero` component.
+  - Define the `Hero` component. ✅
     - Create an array `carouselImages` containing imported image paths.
     - Return a `div` with classes `grid`, `grid-cols-1`, `lg:grid-cols-2`, `gap-24`, and `items-center`.
       - Inside this `div`, another `div`.
