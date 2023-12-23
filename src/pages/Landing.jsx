@@ -1,9 +1,12 @@
-import Hero from "../components/Hero";
+import { Hero, ErrorElement } from "../components";
 
 function Landing() {
-
- 
-  return <Hero />;
+  return (
+    <>
+      <Hero />
+      <ErrorElement />
+    </>
+  );
 }
 
 export default Landing;
