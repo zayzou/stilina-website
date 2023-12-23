@@ -38,6 +38,37 @@ const About = () => {
         "STILINA se distingue en tant que représentant exclusif de plusieurs marques mondiales de renom, garantissant ainsi l'accès à des produits de qualité exceptionnelle",
     },
   ];
+
+  // const timeline = [
+  //   {
+  //     id: 1,
+  //     year: 1992,
+  //     title: "Création de la GMC (Groupe Madani et Chikh)",
+  //     description:
+  //       "La GMC, spécialisée dans la production d'articles scolaires et de stylos à bille, est fondée en 1992.",
+  //   },
+  //   {
+  //     id: 2,
+  //     year: 2012,
+  //     title: "Restructuration et Création de la Sarl Madani Scolaire et Bureau",
+  //     description:
+  //       "Restructuration et Création de la Sarl Madani Scolaire et Bureau",
+  //   },
+  //   {
+  //     id: 3,
+  //     year: 2015,
+  //     title: "Maintien de l'Héritage et Positionnement sur le Marché",
+  //     description:
+  //       "La nouvelle entreprise maintient l'héritage de la GMC et continue à être classée parmi les moyennes entreprises. Elle reste spécialisée dans la production intégrée de stylos à bille du type courant",
+  //   },
+  //   {
+  //     id: 3,
+  //     year: 2023,
+  //     title: "Retour de M Ferhat MADANI",
+  //     description:
+  //       "Le Ferhat Madani est du retour à FRIKAT et abondonne M Macron",
+  //   },
+  // ];
   return (
     <div className="grid grid-rows-1 gap-6 ">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 min-h-[75vh]">
@@ -95,7 +126,7 @@ const About = () => {
         </div>
       </div>
       <div
-        className="scroll-mt-12 minh-[100vh] bg-base-200 rounded-xl"
+        className="scroll-mt-12 min-h-[100vh] bg-base-200 rounded-xl"
         id="histoire"
       >
         <div className="card lg:card-side">
@@ -219,28 +250,46 @@ const About = () => {
             </div>
           </li>
         </ul>
+        <div className="flex w-full xl:justify-end p-4 ">
+          <a href="#services" className="mt-4 btn btn-neutral ">
+            Nos activités
+            <BsArrowRight />
+          </a>
+        </div>
       </div>
 
-      <div className="carousel carousel-center rounded-box">
-        {services.map(({ id, title, image, description }) => {
-          return (
-            <div className="carousel-item " key={id}>
-              <figure className="relative max-w-sm ">
-                <img
-                  className="min-h-[100%] w-[20rem]  bg-white/30 transition-all duration-300 cursor-pointer brightness-50 filter hover:brightness-100"
-                  src={image}
-                  alt={title}
-                />
-                <figcaption className="absolute px-4 text-md text-white top-6">
-                  <h1 className="font-title text-4xl text-center  font-black leading-none xl:text-start mb-4">
-                    {title}
-                  </h1>
-                  <p>{description}</p>
-                </figcaption>
-              </figure>
-            </div>
-          );
-        })}
+      <div className="scroll-mt-12 min-h-[100vh]" id="services">
+        <div className="card lg:card-side rounded-none p-0">
+          <div className="card-body pl-0">
+            <h2 className="card-title">Nos activités</h2>
+            <p>
+              Découvrez comment nous façonnons l'excellence en tant que
+              représentant exclusif de marques mondiales, offrant des produits
+              de qualité supérieure.
+            </p>
+          </div>
+        </div>
+        <div className="carousel carousel-center rounded-box rounded-l-none">
+          {services.map(({ id, title, image, description }) => {
+            return (
+              <div className="carousel-item " key={id}>
+                <figure className="relative max-w-sm ">
+                  <img
+                    className="min-h-[100%] w-[20rem]  bg-white/30 transition-all duration-300 cursor-pointer brightness-50 filter hover:brightness-100"
+                    src={image}
+                    alt={title}
+                  />
+                  <figcaption className="absolute px-4 text-md text-white top-6">
+                    <h1 className="font-title text-4xl text-center  font-black leading-none xl:text-start mb-4">
+                      {title}
+                    </h1>
+                    <p>{description}</p>
+                  </figcaption>
+                </figure>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
