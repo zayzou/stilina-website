@@ -23,7 +23,7 @@ function Hero() {
         <div className="badge badge-outline text-xs">
           Plus de 2600m d'écriture.
         </div>
-        <h1 className="max-w-3xl text-[clamp(2rem,8vw,5rem)] font-black md:text-6xl uppercase">
+        <h1 className="max-w-2xl text-4xl font-black tracking-tight sm:text-6xl uppercase">
           Pour une{" "}
           <span className="[&::selection]:text-base-content relative col-start-1 row-start-1 bg-[linear-gradient(90deg,theme(colors.error)_0%,theme(colors.secondary)_9%,theme(colors.secondary)_42%,theme(colors.primary)_47%,theme(colors.accent)_100%)] bg-clip-text [-webkit-text-fill-color:transparent] [&::selection]:bg-blue-700/20 [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]">
             meuilleur
@@ -31,7 +31,7 @@ function Hero() {
           écriture.
         </h1>
         <p className="mt-8 max-w-xl text-base-content/70 font-title  font-light md:text-lg xl:text-2xl">
-          La qualité de nos produits et notre engagement a constament renforcer
+          La qualité de nos produits et notre engagement en constament renforcer
           notre position de leader sur le marché.
         </p>
         <div className="mt-10">
@@ -40,7 +40,7 @@ function Hero() {
           </Link>
         </div>
       </div>
-      <div className="hidden h-[28rem] lg:carousel carousel-center p-4 space-x-4 bg-neutral rounded-box">
+      <div className="h-[12rem] lg:h-[28rem] carousel carousel-center p-4 space-x-4 bg-neutral rounded-box">
         {carouselImages.map((image, index) => {
           return (
             <div key={index} className="carousel-item">
