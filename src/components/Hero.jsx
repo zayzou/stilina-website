@@ -31,7 +31,7 @@ function Hero() {
           écriture.
         </h1>
         <p className="mt-8 max-w-xl text-base-content/70 font-title  font-light md:text-lg xl:text-2xl">
-          La qualité de nos produits et notre engagement en constament renforcer
+          La qualité de nos produits et notre engagement a constament renforcer
           notre position de leader sur le marché.
         </p>
         <div className="mt-10">
