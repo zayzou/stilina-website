@@ -5,7 +5,7 @@ function HomeLayout() {
     <>
       <Header />
       <Navbar />
-      <section className="align-element  py-20">
+      <section className="align-element py-20">
         <Outlet />
       </section>
     </>
