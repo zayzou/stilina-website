@@ -4,8 +4,6 @@
 import axios from "axios";
 import { productUrl } from "../application";
 
-const customAxios = axios.create({
+export const customAxiosInstance = axios.create({
   baseURL: productUrl,
-  headers: { "X-author": "Zayzou" },
 });
-export default customAxios;
