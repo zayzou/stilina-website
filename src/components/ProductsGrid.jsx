@@ -18,16 +18,16 @@ function ProductsGrid() {
       price: 4400,
     },
     {
-      id: 1,
+      id: 3,
       title: "Kangaro Agrafeuses ",
       image: produit3,
       price: 8900,
     },
   ];
-  const { products } = useLoaderData();
-  console.log(products);
+  // const { products } = useLoaderData();
+  // console.log(products);
   return (
-    <div className="pt-12 grid gap-4 md:grid-col-2 lg:grid-cols-3">
+    <div className="pt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
       {produits.map(({ id, title, image, price }) => {
         return (
           <Link

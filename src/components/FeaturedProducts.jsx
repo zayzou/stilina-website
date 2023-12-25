@@ -3,7 +3,7 @@ import { ProductsGrid, SectionTitle } from ".";
 function FeaturedProducts() {
   return (
     <div className="pt-24">
-      <SectionTitle text="featured products" />
+      <SectionTitle text="Nouveautées" align="text-start" />
       <ProductsGrid />
     </div>
   );

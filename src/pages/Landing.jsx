@@ -1,4 +1,4 @@
-import { FeaturedProducts, Hero } from "../components";
+import { FeaturedProducts, Hero, OurBrands } from "../components";
 import { customAxiosInstance } from "../utils/index";
 
 const url = "products?featured=true";
@@ -13,6 +13,7 @@ function Landing() {
     <>
       <Hero />
       <FeaturedProducts />
+      <OurBrands />
     </>
   );
 }
