@@ -11,6 +11,7 @@ import {
   SingleProduct,
   Products,
   Register,
+  Brands,
 } from "./pages";
 
 //like 404 page
@@ -38,6 +39,7 @@ export const router = createBrowserRouter([
       { path: "/checkout", element: <Checkout /> },
       { path: "/orders", element: <Orders /> },
       { path: "/about", element: <About /> },
+      { path: "/brands", element: <Brands /> },
     ],
   },
   { path: "/login", element: <Login />, errorElement: <Error /> },
