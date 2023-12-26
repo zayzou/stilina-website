@@ -17,29 +17,27 @@ function Brands() {
       description: `  <p>Serivces:</p>
       <ul>
         <li>
-          <p>Production de stylo</p>
+          <p>Production de stylo 🖊️</p>
         </li>
         <li>
-          <p>Production de midwar</p>
+          <p>Production de cousse 📐</p>
         </li>
         <li>
-          <p>Compatible with all daisyUI themes (32 themes)</p>
+          <p>Production de 3ajina 🧁</p>
         </li>
       </ul>
-      <p>Including:</p>
+      <p>Aussi:</p>
       <ul>
         <li>
-          <p>A responsive landing page layout</p>
+          <p>Logistique et relation clients</p>
         </li>
         <li>
           <p>
-            Hero section, Partner logos, Services section,
-            Testimonials, Team introduction, Footer with links and
-            contact form
+            En fais ça aussi
           </p>
         </li>
         <li>
-          <p>Theme changer toggle</p>
+          <p>Et surtout ça 😃</p>
         </li>
       </ul>
       <p>
@@ -56,29 +54,27 @@ function Brands() {
       description: ` <p>Serivces:</p>
       <ul>
         <li>
-          <p>Production de stylo</p>
+          <p>Vente de stylo</p>
         </li>
         <li>
-          <p>Production de midwar</p>
+          <p>Vente de midwar</p>
         </li>
         <li>
-          <p>Compatible with all daisyUI themes (32 themes)</p>
+          <p>Vente de couras </p>
         </li>
       </ul>
-      <p>Including:</p>
+      <p>Aussi:</p>
       <ul>
         <li>
-          <p>A responsive landing page layout</p>
+          <p>Mizan Pap </p>
         </li>
         <li>
           <p>
-            Hero section, Partner logos, Services section,
-            Testimonials, Team introduction, Footer with links and
-            contact form
+            Premier magasin en afrique de nord d'aprés le magasine Jeune afrique
           </p>
         </li>
         <li>
-          <p>Theme changer toggle</p>
+          <p>Livraison surtout le teretoire national</p>
         </li>
       </ul>
       <p>
@@ -101,29 +97,28 @@ function Brands() {
           <p>Production de midwar</p>
         </li>
         <li>
-          <p>Compatible with all daisyUI themes (32 themes)</p>
+          <p><a  target="_blank" class="link link-info" href="https://kgocglobal.com/brands">visitez nous 🤗</a></p>
         </li>
       </ul>
       <p>Including:</p>
       <ul>
         <li>
-          <p>A responsive landing page layout</p>
+          <p>Plus de 10 million de clients </p>
         </li>
         <li>
           <p>
-            Hero section, Partner logos, Services section,
-            Testimonials, Team introduction, Footer with links and
-            contact form
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          Impedit ducimus eum dolorum dolorem vero obcaecati illum 🔎
           </p>
         </li>
         <li>
-          <p>Theme changer toggle</p>
+          <p>Yes we did it ✅</p>
         </li>
       </ul>
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit.
         Impedit ducimus eum dolorum dolorem vero obcaecati illum
-        repellat animi, molestiae id?
+        repellat animi, molestiae id
       </p>`,
     },
   ];
