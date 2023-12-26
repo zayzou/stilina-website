@@ -56,7 +56,7 @@ function OurBrands() {
           })}
         </div>
         <div className="flex w-full justify-center xl:justify-end m-2">
-          <Link to="/brands" className="btn btn-neutral group">
+          <Link to="/brands" className="btn btn-primary rounded-3xl group">
             En savoire plus
             <BsArrowRight />
           </Link>
