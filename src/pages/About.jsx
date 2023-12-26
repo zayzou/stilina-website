@@ -136,11 +136,16 @@ const About = () => {
           <div className="card-body basis-3/4">
             <h2 className="card-title">Notre histoire</h2>
             <p>
-              C’est en 1918 que furent créés au Japon les premiers stylos PILOT,
-              par deux ingénieurs maritimes japonais, Ryosuke Namiki et Masao
-              Wada qui travaillaient en mer sur un navire marchand. En hommage à
-              la mer, leur passion commune, les deux associés donnèrent à la
-              marque le nom de PILOT, une référence au vaisseau amiral.
+              C'est en 1992 que Stilina a émergé, issue de la restructuration de
+              la Sarl Madani Scolaire et Bureau. Portant l'héritage du Groupe
+              Madani et Chikh, elle s'est affirmée comme un leader dans la
+              production de stylos à bille classiques et d'articles scolaires.
+              Avec la renommée de la GMC, Stilina a étendu son impact en
+              important des produits de marques distinguées. Servant plus de 300
+              clients à travers le pays, elle garantit une qualité
+              exceptionnelle pendant 12 mois. Toujours à l'écoute, Stilina a
+              ouvert un magasin de vente en gros, réaffirmant son dévouement
+              envers la satisfaction client.
             </p>
           </div>
         </div>
