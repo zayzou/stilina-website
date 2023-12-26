@@ -3,10 +3,10 @@ import { BsCart3, BsMoonFill, BsSunFill } from "react-icons/bs";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
 import NavLinks from "./NavLinks";
-
+import { Link } from "react-router-dom";
 const themes = {
-  winter: "light",
-  dracula: "dark",
+  winter: "winter",
+  dracula: "dracula",
 };
 
 const getThemeFromLocalStorage = () => {
@@ -41,7 +41,9 @@ function Navbar() {
               <NavLinks />
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">Stilina</a>
+          <Link to="/" className="btn btn-ghost text-xl">
+            Stilina
+          </Link>
         </div>
 
         <div className="navbar-center hidden lg:flex">
