@@ -159,7 +159,7 @@ function Brands() {
                   </div>
                   <div
                     dangerouslySetInnerHTML={{ __html: description }}
-                    className="prose prose-sm prose-li:my-0 prose-ul:leading-none prose-li:leading-normal prose-p:my-2 prose-ul:my-2 text-xs [text-wrap:balance]"
+                    className="prose prose-sm md:prose-md prose-li:my-0 prose-ul:leading-none prose-li:leading-normal prose-p:my-2 prose-ul:my-2 text-xs [text-wrap:balance]"
                   ></div>
                 </div>
                 <div className="col-span-5 row-start-1 flex flex-col gap-6 xl:col-span-3 bg-neutral rounded-box">
