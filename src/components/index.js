@@ -9,5 +9,6 @@ export { default as SectionTitle } from "./SectionTitle";
 export { default as OurBrands } from "./OurBrands";
 export { default as OurBrands2 } from "./OurBrands2";
 export { default as Footer } from "./Footer";
+export { default as Media } from "./Media";
 // export { default as ParallaxScroll } from "./ParallaxScroll";
 // export { default as Navbar2 } from "./Navbar2";
