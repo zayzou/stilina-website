@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 import NavLinks from "./NavLinks";
 import { Link } from "react-router-dom";
 const themes = {
-  winter: "winter",
+  winter: "light",
   dracula: "dracula",
 };
 
