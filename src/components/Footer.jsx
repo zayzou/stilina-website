@@ -7,9 +7,15 @@ function Footer() {
       <footer className=" footer p-10 bg-neutral text-neutral-content">
         <nav>
           <header className="footer-title">Services</header>
-          <a className="link link-hover">Nos Marques</a>
-          <a className="link link-hover">Produit</a>
-          <a className="link link-hover">Devenir client</a>
+          <Link to="/brands" className="link link-hover">
+            Nos Marques
+          </Link>
+          <Link to="products" className="link link-hover">
+            Produit
+          </Link>
+          <Link to="register" className="link link-hover">
+            Devenir client
+          </Link>
         </nav>
         <nav>
           <header className="footer-title">Société</header>
@@ -25,8 +31,12 @@ function Footer() {
         </nav>
         <nav>
           <header className="footer-title">Légal</header>
-          <a className="link link-hover">Politique de confidentialité</a>
-          <a className="link link-hover">Politique des Cookie</a>
+          <Link to="privacy-policy" className="link link-hover">
+            Politique de confidentialité
+          </Link>
+          <Link to="cookies-policy" className="link link-hover">
+            Politique des Cookie
+          </Link>
         </nav>
       </footer>
       <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">

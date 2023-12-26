@@ -1,5 +1,3 @@
-import React from "react";
-
 function SectionTitle({ text, align }) {
   return (
     // text-3xl font-medium tracking-wider capitalize
