@@ -16,7 +16,7 @@ function Media() {
             réalisations et les récits dynamiques qui façonnent l'essence de
             Stilina.
           </p>
-          <Link to="/media" className="btn btn-wide btn-primary rounded-3xl">
+          <Link to="/media" className="btn md:btn-wide btn-primary rounded-3xl">
             Voir tout
           </Link>
         </div>

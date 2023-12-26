@@ -35,7 +35,7 @@ function OurBrands() {
               <h2 className="card-title tracking-wider ">
                 Un univers adapté à chaque besoin
               </h2>
-              <p className="text-base-content/80 mx-auto max-w-lg font-sans text-lg font-light">
+              <p className="text-base-content/80 mx-auto max-w-lg font-sans text-lg font-light text-justify">
                 Découvrez la diversité de nos marques renommées, symboles de
                 fiabilité et de performance. Chacune incarne l'engagement de
                 Stilina à fournir des solutions exceptionnelles, tant pour les
@@ -45,7 +45,7 @@ function OurBrands() {
               <div className="mt-4 card-actions justify-start">
                 <Link
                   to="/brands"
-                  className="btn btn-wide btn-secondary rounded-3xl"
+                  className="btn md:btn-wide btn-secondary rounded-3xl"
                 >
                   En savoir plus
                 </Link>
@@ -54,15 +54,15 @@ function OurBrands() {
           </div>
           <div className="grid grid-cols-3 gap-4 justify-center">
             <img
-              className="self-center mask mask-circle w-24 h-24 bg-white shadow-2xl"
+              className="self-center mask mask-circle w-12 h-12 md:w-24 md:h-24 bg-white shadow-2xl"
               src={kangaro}
             />
             <img
-              className="self-center mask mask-circle w-24 h-24 bg-white shadow-2xl"
+              className="self-center mask mask-circle w-12 h-12  md:w-24 md:h-24 bg-white shadow-2xl"
               src={stilina}
             />
             <img
-              className="self-center mask mask-circle w-24 h-24 bg-white shadow-lg"
+              className="self-center mask mask-circle w-12 h-12  md:w-24 md:h-24 bg-white shadow-lg"
               src={mizanpap}
             />
           </div>
