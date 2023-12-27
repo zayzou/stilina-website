@@ -97,7 +97,7 @@ function Brands() {
           <p>Production de midwar</p>
         </li>
         <li>
-          <p><a  target="_blank" class="link link-info" href="https://kgocglobal.com/brands">visitez nous 🤗</a></p>
+          <p><a  target="_blank" className="link link-info" href="https://kgocglobal.com/brands">visitez nous 🤗</a></p>
         </li>
       </ul>
       <p>Including:</p>
@@ -167,16 +167,16 @@ function Brands() {
                     target="_blank"
                     href={image}
                     rel="noopener noreferrer"
-                    class="rounded-box group relative block aspect-[4/3] overflow-hidden object-cover"
+                    className="rounded-box group relative block aspect-[4/3] overflow-hidden object-cover"
                   >
-                    <div class="absolute inset-0 z-[1] grid place-content-center opacity-0 transition-all  bg-black/50 duration-500 group-hover:scale-150 group-hover:opacity-100">
+                    <div className="absolute inset-0 z-[1] grid place-content-center opacity-0 transition-all  bg-black/50 duration-500 group-hover:scale-150 group-hover:opacity-100">
                       <SlMagnifierAdd className="h-8 w-8 text-white" />
                     </div>
                     <img
                       src={image}
                       alt={title}
                       loading="lazy"
-                      class="bg-base-300 aspect-[4/3] w-full bg-cover bg-center object-cover"
+                      className="bg-base-300 aspect-[4/3] w-full bg-cover bg-center object-cover"
                     />
                   </a>
                 </div>
