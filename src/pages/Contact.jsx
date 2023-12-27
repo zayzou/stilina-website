@@ -26,7 +26,10 @@ function Contact() {
         </p>
         <p className="inline-flex items-center  ">
           <FiPhone className="mr-2 w-5 h-5" />{" "}
-          <span className="text-sm">026 38 71 71 / 07 70 80 67 80</span>
+          <span className="text-sm">
+            <a href="tel:+21326387171">+213 26 38 71 71</a> /{" "}
+            <a href="tel:+213770806780">+213 07 70 80 67 80</a>
+          </span>
         </p>
         <p className="inline-flex items-center  ">
           <FiMail className="mr-2 w-5 h-5" />{" "}
