@@ -15,10 +15,14 @@ function Contact() {
         </h2>
         <p className="inline-flex items-center ">
           <FiMapPin className="mr-2 w-5 h-5" />{" "}
-          <span className="text-sm">
+          <a
+            href="https://maps.app.goo.gl/C135q5oVzfv4Gp228"
+            target="_blank"
+            className="link text-sm"
+          >
             SARL Madani Scolaire et Bureau Usine Frikat, DEM, Tizi Ouzou,
             Algerie
-          </span>
+          </a>
         </p>
         <p className="inline-flex items-center  ">
           <FiPhone className="mr-2 w-5 h-5" />{" "}
