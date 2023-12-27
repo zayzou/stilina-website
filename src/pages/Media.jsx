@@ -1,27 +1,6 @@
-import media01 from "../assets/images/media01.jpeg";
-import event01 from "../assets/images/event-1.jpeg";
-import { nanoid } from "@reduxjs/toolkit";
 import MyReveal from "../utils/MyReveal";
-
+import { events } from "../data";
 function Media() {
-  const brands = [
-    {
-      id: nanoid(),
-      title: "Kohe at 19th Annual Chef Awards",
-      description: "",
-      tag: "media",
-      image: event01,
-      date: "depuis 02 mois",
-    },
-    {
-      id: nanoid(),
-      title: "Djazagro 2023",
-      tag: "exposition",
-      description: " Participation de stilina à Djazagro 2023",
-      image: media01,
-      date: "depuis 14 jours",
-    },
-  ];
   return (
     <>
       <MyReveal>
@@ -37,7 +16,7 @@ function Media() {
       <div className="flex flex-col gap-4 py-10"></div>
       <MyReveal>
         <div className="grid grid-cols-2 gap-9 ">
-          {brands.map(({ id, title, description, tag, image, date }) => {
+          {events.map(({ id, title, description, tag, image, date }) => {
             return (
               <a
                 href="#"

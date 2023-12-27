@@ -13,6 +13,9 @@ import mizanpapLogo from "./assets/images/mizanpap.png";
 import stilinaLogo from "./assets/images/stilina.png";
 import kangaroLogo from "./assets/images/kangaro.png";
 
+import media01 from "./assets/images/media01.jpeg";
+import event01 from "./assets/images/event-1.jpeg";
+
 /**
  * Export social icons function
  * the function takes a tailwind css rules to style the icon
@@ -174,5 +177,24 @@ export const brands = [
       Impedit ducimus eum dolorum dolorem vero obcaecati illum
       repellat animi, molestiae id
     </p>`,
+  },
+];
+
+export const events = [
+  {
+    id: nanoid(),
+    title: "Kohe at 19th Annual Chef Awards",
+    description: "",
+    tag: "media",
+    image: event01,
+    date: "depuis 02 mois",
+  },
+  {
+    id: nanoid(),
+    title: "Djazagro 2023",
+    tag: "exposition",
+    description: " Participation de stilina à Djazagro 2023",
+    image: media01,
+    date: "depuis 14 jours",
   },
 ];
