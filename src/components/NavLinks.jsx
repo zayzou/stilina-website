@@ -5,7 +5,7 @@ const links = [
   { id: 2, url: "about", text: "Nous Connaître " },
   { id: 3, url: "brands", text: "Marques" },
   { id: 4, url: "media", text: "Media" },
-  { id: 5, url: "checkout", text: "Contact" },
+  { id: 5, url: "contact", text: "Contact" },
   { id: 6, url: "orders", text: "Produits" },
 ];
 function NavLinks() {

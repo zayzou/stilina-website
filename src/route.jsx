@@ -13,7 +13,7 @@ import {
   Register,
   Brands,
   Media,
-  NewsMedia,
+  Contact,
 } from "./pages";
 
 //like 404 page
@@ -43,9 +43,9 @@ export const router = createBrowserRouter([
       { path: "/about", element: <About /> },
       { path: "/brands", element: <Brands /> },
       { path: "/media", element: <Media /> },
+      { path: "/contact", element: <Contact /> },
     ],
   },
-  { path: "/media/:id", element: <NewsMedia /> },
   { path: "/login", element: <Login />, errorElement: <Error /> },
   { path: "/register", element: <Register />, errorElement: <Error /> },
 ]);

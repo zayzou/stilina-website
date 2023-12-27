@@ -1,8 +1,6 @@
-import { Link } from "react-router-dom";
 import media01 from "../assets/images/media01.jpeg";
 import event01 from "../assets/images/event-1.jpeg";
 import { nanoid } from "@reduxjs/toolkit";
-import { FaArrowRight } from "react-icons/fa6";
 
 function Media() {
   const brands = [
