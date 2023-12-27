@@ -12,6 +12,7 @@ import {
   Products,
   Register,
   Brands,
+  Media,
 } from "./pages";
 
 //like 404 page
@@ -40,6 +41,7 @@ export const router = createBrowserRouter([
       { path: "/orders", element: <Orders /> },
       { path: "/about", element: <About /> },
       { path: "/brands", element: <Brands /> },
+      { path: "/media", element: <Media /> },
     ],
   },
   { path: "/login", element: <Login />, errorElement: <Error /> },
