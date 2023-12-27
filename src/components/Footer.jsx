@@ -1,7 +1,9 @@
-import React from "react";
-import { FaFacebookF, FaInstagram, FaS, FaYoutube } from "react-icons/fa6";
+import { social } from "../data";
+import { FaS } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 function Footer() {
+  const iconStyle = "w-6 h-6";
+  const socialLink = social(iconStyle);
   return (
     <>
       <footer className=" footer p-10 bg-neutral text-neutral-content">
@@ -49,15 +51,17 @@ function Footer() {
         </aside>
         <nav className="md:place-self-center md:justify-self-end">
           <div className="grid grid-flow-col gap-4">
-            <a href="">
-              <FaFacebookF className="w-6 h-6" />
-            </a>
-            <a href="">
-              <FaYoutube className="w-6 h-6" />
-            </a>
-            <a href="">
-              <FaInstagram className="w-6 h-6" />
-            </a>
+            {socialLink.map(({ id, url, icon }) => {
+              return (
+                <a
+                  key={id}
+                  href={url}
+                  className="btn rounded-3xl bg-base-100 shadow-xl"
+                >
+                  {icon}
+                </a>
+              );
+            })}
           </div>
         </nav>
       </footer>

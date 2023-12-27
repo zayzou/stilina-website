@@ -44,11 +44,11 @@ function Media() {
                 <img className="h-full w-60" src={image} alt={title} />
               </figure>
               <div className="card-body p-4">
-                <div class="flex justify-between items-center mb-5 ">
-                  <div class="badge badge-success badge-outline badge-md ">
+                <div className="flex justify-between items-center mb-5 ">
+                  <div className="badge badge-success badge-outline badge-md ">
                     {tag}
                   </div>
-                  <span class="text-sm">{date}</span>
+                  <span className="text-sm">{date}</span>
                 </div>
                 <h2 className="card-title">{title}</h2>
                 <p className="font-light">{description}</p>

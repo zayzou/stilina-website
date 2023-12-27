@@ -1,13 +1,13 @@
-import React from "react";
-import { FaFacebookF } from "react-icons/fa6";
-import { FaYoutube } from "react-icons/fa6";
-import { FaInstagram } from "react-icons/fa6";
 import { FiMapPin } from "react-icons/fi";
 import { FiPhone } from "react-icons/fi";
 import { FiMail } from "react-icons/fi";
 import { MdOutlineFax } from "react-icons/md";
 
+import { social } from "../data";
+
 function Contact() {
+  const iconStyle = "w-6 h-3 md:w-12 md:h-6";
+  const socialLink = social(iconStyle);
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center ">
       <div className="flex flex-col gap-10">
@@ -47,23 +47,24 @@ function Contact() {
         <div>
           <p className="mb-4">Suivez nous</p>
           <div className="flex gap-3">
-            <a href="" class="btn rounded-3xl bg-base-100 shadow-xl">
-              <FaFacebookF className="w-6 h-3 md:w-12 md:h-6" />
-            </a>
-            <a href="" class="btn rounded-3xl bg-base-100 shadow-xl">
-              <FaInstagram className="w-6 h-3 md:w-12 md:h-6" />
-            </a>
-
-            <a href="" class="btn rounded-3xl bg-base-100 shadow-xl">
-              <FaYoutube className="w-6 h-3 md:w-12 md:h-6" />
-            </a>
+            {socialLink.map(({ id, url, icon }) => {
+              return (
+                <a
+                  key={id}
+                  href={url}
+                  className="btn rounded-3xl bg-base-100 shadow-xl"
+                >
+                  {icon}
+                </a>
+              );
+            })}
           </div>
         </div>
       </div>
       <div className="card bg-base-200 shadow-xl">
         <div className="card-body">
           <h2 className="card-title">Que souhaitez-vous demander ?</h2>
-          <form class="">
+          <form>
             <label className="form-control w-full mb-5">
               <div className="label">
                 <span className="label-text">Nom complet</span>
