@@ -8,7 +8,7 @@ import { FiMail } from "react-icons/fi";
 
 function Contact() {
   return (
-    <div className="grid grid-cols-2 gap-10 items-center ">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center ">
       <div className="flex flex-col gap-10">
         <h2 className="text-lg font-bold sm:text-3xl xl:text-4xl">
           Contactez-nous
@@ -35,14 +35,14 @@ function Contact() {
           <p className="mb-4">Suivez nous</p>
           <div className="flex gap-3">
             <a href="" class="btn rounded-3xl bg-base-100 shadow-xl">
-              <FaFacebookF className="w-12 h-6" />
+              <FaFacebookF className="w-6 h-3 md:w-12 md:h-6" />
             </a>
             <a href="" class="btn rounded-3xl bg-base-100 shadow-xl">
-              <FaInstagram className="w-12 h-6" />
+              <FaInstagram className="w-6 h-3 md:w-12 md:h-6" />
             </a>
 
             <a href="" class="btn rounded-3xl bg-base-100 shadow-xl">
-              <FaYoutube className="w-12 h-6" />
+              <FaYoutube className="w-6 h-3 md:w-12 md:h-6" />
             </a>
           </div>
         </div>
