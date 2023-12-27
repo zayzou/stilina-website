@@ -1,6 +1,6 @@
-import { FeaturedProducts, Hero, Media, OurBrands2 } from "../components";
+import { FeaturedProducts, Hero, Media, OurBrands } from "../components";
 import { customAxiosInstance } from "../utils/index";
-
+import { products } from "../data";
 const url = "products?featured=true";
 
 export const loader = async () => {
@@ -12,8 +12,8 @@ function Landing() {
   return (
     <>
       <Hero />
-      <FeaturedProducts />
-      <OurBrands2 />
+      <FeaturedProducts products={products} />
+      <OurBrands />
       <Media />
     </>
   );
