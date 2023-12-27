@@ -1,5 +1,4 @@
-import event01 from "../assets/images/event-1.jpeg";
-import event04 from "../assets/images/event-4.jpg";
+// Used In landing page
 import { Link } from "react-router-dom";
 function Media() {
   return (
@@ -31,16 +30,6 @@ function Media() {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
           ></iframe>
-          {/* <img
-            className="w-full rounded-lg"
-            src={event01}
-            alt="office content 1"
-          />
-          <img
-            className="mt-4 w-full lg:mt-10 rounded-lg"
-            src={event04}
-            alt="office content 2"
-          /> */}
         </div>
       </div>
     </section>

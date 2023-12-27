@@ -37,9 +37,10 @@ function Media() {
       <div className="grid grid-cols-2 gap-9 ">
         {brands.map(({ id, title, description, tag, image, date }) => {
           return (
-            <article
+            <a
+              href="#"
               key={id}
-              className="card card-side bg-base-200 shadow-xl rounded-md"
+              className="card card-side bg-base-200 shadow-xl rounded-md transition-all duration-300 ease-in-out transform hover:scale-110 "
             >
               <figure>
                 <img className="h-full w-60" src={image} alt={title} />
@@ -54,15 +55,15 @@ function Media() {
                 <h2 className="card-title">{title}</h2>
                 <p className="font-light">{description}</p>
                 <div className="card-actions justify-end">
-                  <Link
+                  {/* <Link
                     to={`media/${id}`}
                     className="inline-flex items-center  font-medium link link-neutral-content link-hover"
                   >
                     Lire <FaArrowRight className="ml-2 w-4 h-4" />
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
-            </article>
+            </a>
           );
         })}
       </div>

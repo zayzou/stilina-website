@@ -11,3 +11,4 @@ export { default as Products } from "./Products";
 export { default as Error } from "./Error";
 export { default as Brands } from "./Brands";
 export { default as Media } from "./Media";
+export { default as NewsMedia } from "./NewsMedia";
