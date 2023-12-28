@@ -26,3 +26,4 @@ dist-ssr
 
 #Temp files
 src/utils/Reveal.jsx
+.env

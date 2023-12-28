@@ -9,7 +9,7 @@ import { useState, useEffect } from "react";
 const client = createClient({
   space: "8sdirxbcrn01",
   environment: "master",
-  accessToken: "_tF66Odl_WSbxFjQ7a_JXnqXyJFvunSeF_Ng8qcLXmE",
+  accessToken: import.meta.env.VITE_API_KEY,
 });
 
 export const useFetchBrands = () => {
