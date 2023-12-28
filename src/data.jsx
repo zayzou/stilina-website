@@ -19,6 +19,7 @@ export const useFetchBrands = () => {
   const getData = async () => {
     try {
       const response = await client.getEntries({
+        order: "sys.id",
         content_type: "stilinaBrands",
       });
       const brands = response.items.map((item) => {
