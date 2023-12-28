@@ -8,9 +8,8 @@ function ProductsGrid({ products }) {
     <div className="pt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
       {products.map(({ id, title, image, price }) => {
         return (
-          <MyReveal>
+          <MyReveal key={id}>
             <Link
-              key={id}
               to={`/products/${id}`}
               className="card w-full shadow-xl hover:shadow-2xl transition duration-300"
             >

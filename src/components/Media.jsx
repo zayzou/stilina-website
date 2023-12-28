@@ -32,10 +32,8 @@ function Media() {
               width="560"
               height="315"
               src="https://www.youtube.com/embed/le2CM3NrP-M?si=Wf7SlylrRedZT8dD"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
+              title="Stilina "
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             ></iframe>
           </div>
         </MyReveal>

@@ -1,7 +1,20 @@
 import { SlMagnifierAdd } from "react-icons/sl";
 import { brands } from "../data";
 import MyReveal from "../utils/MyReveal";
+import { useFetchBrands } from "../data";
 function Brands() {
+  const { loading, brands } = useFetchBrands();
+  console.log(loading);
+  console.log(brands);
+  if (loading) {
+    return (
+      <div className="flex flex-col items-center gap-6">
+        <h1 className="capitalize font-title text-base-content text-3xl font-extrabold lg:text-4xl xl:text-6xl">
+          Loading ...
+        </h1>
+      </div>
+    );
+  }
   return (
     <>
       <MyReveal>
@@ -17,7 +30,7 @@ function Brands() {
       </MyReveal>
       <div className="flex flex-col gap-4 py-10"></div>
       <div className="flex flex-col gap-16 ">
-        {brands.map(({ name, image, description, title, id }) => {
+        {brands.map(({ name, img, description, title, id }) => {
           return (
             <div key={id}>
               <MyReveal>
@@ -48,7 +61,7 @@ function Brands() {
                   <div className="col-span-5 row-start-1 flex flex-col gap-6 xl:col-span-3 rounded-box">
                     <a
                       target="_blank"
-                      href={image}
+                      href={img}
                       rel="noopener noreferrer"
                       className="rounded-box group relative block aspect-[4/3] overflow-hidden object-cover"
                     >
@@ -56,7 +69,7 @@ function Brands() {
                         <SlMagnifierAdd className="h-8 w-8 text-white" />
                       </div>
                       <img
-                        src={image}
+                        src={img}
                         alt={title}
                         loading="lazy"
                         className="bg-base-300 aspect-[4/3] w-full bg-cover bg-center object-cover"

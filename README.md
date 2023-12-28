@@ -4970,3 +4970,15 @@ const Header = () => {
 }
 
 ```
+
+#### Content Added by Zayzou
+
+### Contentful API (Headless CMS)
+
+Contentful url : https://app.contentful.com/spaces/8sdirxbcrn01/home
+
+Space ID - 8sdirxbcrn01
+
+Content Delivery API -
+Use this access token to consume published content (i.e. content in “Published” status)
+access token - \_tF66Odl_WSbxFjQ7a_JXnqXyJFvunSeF_Ng8qcLXmE

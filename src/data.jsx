@@ -16,6 +16,72 @@ import kangaroLogo from "./assets/images/kangaro.png";
 import media01 from "./assets/images/media01.jpeg";
 import event01 from "./assets/images/event-1.jpeg";
 
+import { createClient } from "contentful";
+import { useState, useEffect } from "react";
+const client = createClient({
+  space: "8sdirxbcrn01",
+  environment: "master",
+  accessToken: "_tF66Odl_WSbxFjQ7a_JXnqXyJFvunSeF_Ng8qcLXmE",
+});
+
+export const useFetchBrands = () => {
+  const [loading, setLoading] = useState(true);
+  const [brands, setBrands] = useState([]);
+
+  const getData = async () => {
+    try {
+      const response = await client.getEntries({
+        content_type: "stilinaBrands",
+      });
+      const brands = response.items.map((item) => {
+        const { name, title, image, logo, description } = item.fields;
+        const id = item.sys.id;
+        const img = image.fields?.file?.url;
+        return { id, name, title, img, logo, description };
+      });
+      setBrands(brands);
+      setLoading(false);
+    } catch (error) {
+      console.log(error);
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  return { loading, brands };
+};
+
+export const useFetchMedia = () => {
+  const [loading, setLoading] = useState(true);
+  const [media, setMedia] = useState([]);
+
+  const getData = async () => {
+    try {
+      const response = await client.getEntries({
+        content_type: "stilinaMedia",
+      });
+      const media = response.items.map((item) => {
+        const { title, description, tag, image, date } = item.fields;
+        const id = item.sys.id;
+        const img = image.fields?.file?.url;
+        return { id, title, description, tag, img, date };
+      });
+
+      setMedia(media);
+      setLoading(false);
+    } catch (error) {
+      console.log(error);
+      setLoading(false);
+    }
+  };
+  useEffect(() => {
+    getData();
+  }, []);
+  return { loading, media };
+};
 /**
  * Export social icons function
  * the function takes a tailwind css rules to style the icon

@@ -15,3 +15,13 @@ export const formatPrice = (price) => {
   }).format((price / 100).toFixed(2));
   return amount;
 };
+
+export const formatDate = (date) => {
+  const newDate = new Date(date);
+  const option = {
+    year: "numeric",
+    month: "numeric",
+    day: "numeric",
+  };
+  return newDate.toLocaleDateString("fr-DZ", option);
+};

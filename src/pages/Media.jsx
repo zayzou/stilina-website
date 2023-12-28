@@ -1,6 +1,11 @@
 import MyReveal from "../utils/MyReveal";
 import { events } from "../data";
+import { useFetchMedia } from "../data";
+import { formatDate } from "../utils";
 function Media() {
+  const { loading, media } = useFetchMedia();
+  console.log(loading);
+  console.log(media);
   return (
     <>
       <MyReveal>
@@ -16,7 +21,7 @@ function Media() {
       <div className="flex flex-col gap-4 py-10"></div>
       <MyReveal>
         <div className="grid grid-cols-2 gap-9 ">
-          {events.map(({ id, title, description, tag, image, date }) => {
+          {media.map(({ id, title, description, tag, img, date }) => {
             return (
               <a
                 href="#"
@@ -24,14 +29,14 @@ function Media() {
                 className="card card-side bg-base-200 shadow-xl rounded-md transition-all duration-300 ease-in-out transform hover:scale-110 "
               >
                 <figure>
-                  <img className="h-full w-60" src={image} alt={title} />
+                  <img className="h-full w-60" src={img} alt={title} />
                 </figure>
                 <div className="card-body p-4">
                   <div className="flex justify-between items-center mb-5 ">
                     <div className="badge badge-success badge-outline badge-md ">
                       {tag}
                     </div>
-                    <span className="text-sm">{date}</span>
+                    <span className="text-sm">{formatDate(date)}</span>
                   </div>
                   <h2 className="card-title">{title}</h2>
                   <p className="font-light">{description}</p>
