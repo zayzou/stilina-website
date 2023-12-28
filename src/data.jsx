@@ -1,20 +1,8 @@
 import { FaFacebookF, FaYoutube, FaInstagram } from "react-icons/fa6";
-import { nanoid } from "@reduxjs/toolkit";
 
 import produit1 from "./assets/images/carousel-06.webp";
 import produit2 from "./assets/images/carousel-07.jpeg";
 import produit3 from "./assets/images/carousel-04.webp";
-
-import stilina from "./assets/images/carousel-06.webp";
-import mizanpap from "./assets/images/carousel-07.jpeg";
-import kangaro from "./assets/images/carousel-04.webp";
-
-import mizanpapLogo from "./assets/images/mizanpap.png";
-import stilinaLogo from "./assets/images/stilina.png";
-import kangaroLogo from "./assets/images/kangaro.png";
-
-import media01 from "./assets/images/media01.jpeg";
-import event01 from "./assets/images/event-1.jpeg";
 
 import { createClient } from "contentful";
 import { useState, useEffect } from "react";
@@ -37,7 +25,8 @@ export const useFetchBrands = () => {
         const { name, title, image, logo, description } = item.fields;
         const id = item.sys.id;
         const img = image.fields?.file?.url;
-        return { id, name, title, img, logo, description };
+        const brandLogo = logo.fields?.file?.url;
+        return { id, name, title, img, brandLogo, description };
       });
       setBrands(brands);
       setLoading(false);
@@ -82,6 +71,7 @@ export const useFetchMedia = () => {
   }, []);
   return { loading, media };
 };
+
 /**
  * Export social icons function
  * the function takes a tailwind css rules to style the icon
@@ -127,6 +117,18 @@ export const products = [
     price: 8900,
   },
 ];
+
+/* 
+import stilina from "./assets/images/carousel-06.webp";
+import mizanpap from "./assets/images/carousel-07.jpeg";
+import kangaro from "./assets/images/carousel-04.webp";
+
+import mizanpapLogo from "./assets/images/mizanpap.png";
+import stilinaLogo from "./assets/images/stilina.png";
+import kangaroLogo from "./assets/images/kangaro.png";
+
+import media01 from "./assets/images/media01.jpeg";
+import event01 from "./assets/images/event-1.jpeg";
 
 export const brands = [
   {
@@ -264,3 +266,4 @@ export const events = [
     date: "depuis 14 jours",
   },
 ];
+ */

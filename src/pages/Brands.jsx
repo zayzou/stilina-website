@@ -1,11 +1,10 @@
 import { SlMagnifierAdd } from "react-icons/sl";
-import { brands } from "../data";
+
 import MyReveal from "../utils/MyReveal";
 import { useFetchBrands } from "../data";
 function Brands() {
   const { loading, brands } = useFetchBrands();
-  console.log(loading);
-  console.log(brands);
+
   if (loading) {
     return (
       <div className="flex flex-col items-center gap-6">

@@ -1,8 +1,9 @@
 import { SectionTitle } from ".";
 import { Link } from "react-router-dom";
-import { brands } from "../data";
+import { useFetchBrands } from "../data";
 import MyReveal from "../utils/MyReveal";
 function OurBrands() {
+  const { loading, brands } = useFetchBrands();
   return (
     <MyReveal>
       <div className="pt-24">
@@ -33,12 +34,12 @@ function OurBrands() {
               </div>
             </div>
             <div className="grid grid-cols-3 gap-4 justify-center">
-              {brands.map(({ id, logo }) => {
+              {brands.map(({ id, brandLogo }) => {
                 return (
                   <img
                     key={id}
                     className="self-center mask mask-circle w-12 h-12 md:w-24 md:h-24 bg-white shadow-2xl"
-                    src={logo}
+                    src={brandLogo}
                   />
                 );
               })}

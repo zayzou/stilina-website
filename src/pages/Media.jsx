@@ -1,11 +1,9 @@
 import MyReveal from "../utils/MyReveal";
-import { events } from "../data";
+
 import { useFetchMedia } from "../data";
 import { formatDate } from "../utils";
 function Media() {
   const { loading, media } = useFetchMedia();
-  console.log(loading);
-  console.log(media);
   return (
     <>
       <MyReveal>
