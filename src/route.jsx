@@ -14,6 +14,7 @@ import {
   Brands,
   Media,
   Contact,
+  SingleMedia,
 } from "./pages";
 
 //like 404 page
@@ -43,6 +44,7 @@ export const router = createBrowserRouter([
       { path: "/about", element: <About /> },
       { path: "/brands", element: <Brands /> },
       { path: "/media", element: <Media /> },
+      { path: "/media/:id", element: <SingleMedia /> },
       { path: "/contact", element: <Contact /> },
     ],
   },

@@ -12,3 +12,4 @@ export { default as Error } from "./Error";
 export { default as Brands } from "./Brands";
 export { default as Media } from "./Media";
 export { default as Contact } from "./Contact";
+export { default as SingleMedia } from "./SingleMedia";
