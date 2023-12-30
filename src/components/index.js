@@ -10,3 +10,4 @@ export { default as OurBrands } from "./landingPage/OurBrands";
 export { default as OurBrands2 } from "./landingPage/OurBrands";
 export { default as Footer } from "./Footer";
 export { default as Media } from "./landingPage/Media";
+export { default as Post } from "./Post";
