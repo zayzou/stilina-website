@@ -1,6 +1,6 @@
 import { Link, useLoaderData } from "react-router-dom";
-import { formatPrice } from "../utils";
-import MyReveal from "../utils/MyReveal";
+import { formatPrice } from "../../utils";
+import MyReveal from "../../utils/MyReveal";
 function ProductsGrid({ products }) {
   // const { products } = useLoaderData();
   // console.log(products);

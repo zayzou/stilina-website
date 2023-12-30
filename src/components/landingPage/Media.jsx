@@ -1,6 +1,6 @@
 // Used In landing page
 import { Link } from "react-router-dom";
-import MyReveal from "../utils/MyReveal";
+import MyReveal from "../../utils/MyReveal";
 function Media() {
   return (
     <section className="pt-12">

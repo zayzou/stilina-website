@@ -1,4 +1,4 @@
-import { ProductsGrid, SectionTitle } from ".";
+import { ProductsGrid, SectionTitle } from "..";
 
 function FeaturedProducts({ products }) {
   return (

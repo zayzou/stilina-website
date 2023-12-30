@@ -98,6 +98,14 @@ export const social = (style) => {
   ];
 };
 
+export const menuLinks = [
+  { id: 1, url: "/", text: "ACCUEIL" },
+  { id: 2, url: "about", text: "Nous Connaître " },
+  { id: 3, url: "brands", text: "Marques" },
+  { id: 4, url: "media", text: "Media" },
+  { id: 5, url: "contact", text: "Contact" },
+  { id: 6, url: "orders", text: "Produits" },
+];
 export const products = [
   {
     id: 1,
