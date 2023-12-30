@@ -22,7 +22,6 @@ function Media() {
         </div>
       </MyReveal>
       <div className="flex flex-col gap-4 py-10"></div>
-
       <div className="grid grid-cols-2  gap-4">
         {media.map((post) => {
           return <Post key={post.id} post={post} />;

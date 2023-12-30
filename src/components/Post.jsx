@@ -8,7 +8,7 @@ export default function Post({ post }) {
   return (
     <MyReveal>
       <Link
-        to={`media /${id}`}
+        to={`/media/${id}`}
         className="card  bg-base-100 shadow-xl "
         key={id}
         onMouseEnter={() => setHovered(true)}
