@@ -73,6 +73,26 @@ export const useFetchMedia = () => {
   return { loading, media };
 };
 
+export const useFetchSinglePost = (id) => {
+  const [loading, setLoading] = useState(true);
+  const [post, setPost] = useState(null);
+
+  const getSinglePost = async () => {
+    try {
+      const response = await client.getEntry(id);
+      setPost(response.fields);
+      setLoading(false);
+    } catch (error) {
+      setLoading(false);
+      console.log(error);
+    }
+  };
+  useEffect(() => {
+    getSinglePost();
+  }, []);
+  return { loading, post };
+};
+
 /**
  * Export social icons function
  * the function takes a tailwind css rules to style the icon
