@@ -12,3 +12,4 @@ export { default as Footer } from "./Footer";
 export { default as Media } from "./landingPage/Media";
 export { default as Post } from "./Post";
 export { default as Loading } from "./Loading";
+export { default as Tag } from "./Tag";

@@ -1,5 +1,5 @@
 import { useFetchSinglePost } from "../data";
-import { Footer, Loading } from "../components";
+import { Footer, Loading, Tag } from "../components";
 function SingleMedia() {
   const id = "3WXJRw35SaHO7utFx21yph";
   const { loading, post } = useFetchSinglePost(id);
@@ -7,9 +7,9 @@ function SingleMedia() {
     return <Loading />;
   }
   console.log(post);
-  const { title, description, tag, img, date } = post;
+  const { title, description, tag, image, date } = post;
 
-  const imgSrc = post?.image?.fields?.file?.url;
+  const imgSrc = image?.fields?.file?.url;
 
   return (
     <>
@@ -33,6 +33,7 @@ function SingleMedia() {
           className="prose prose-sm md:prose-base p-10"
           style={{ maxWidth: "fit-content" }}
         >
+          <Tag tag={tag} />
           <div>
             <h1>Stilina sous les projecteurs de l'ENTV</h1>
             <p>
@@ -49,6 +50,7 @@ function SingleMedia() {
               détermination. Merci à tous nos clients et partenaires pour leur
               soutien continu.
             </p>
+            <p>{description}</p>
           </div>
         </div>
       </main>

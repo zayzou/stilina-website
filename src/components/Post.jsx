@@ -2,6 +2,7 @@ import { formatDate } from "../utils";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import MyReveal from "../utils/MyReveal";
+import Tag from "./Tag";
 export default function Post({ post }) {
   const { id, title, description, tag, img, date } = post;
   const [hovered, setHovered] = useState(false);
@@ -27,7 +28,7 @@ export default function Post({ post }) {
           />
         </figure>
         <div className="card-body  ">
-          <div className="badge badge-success  badge-md self-start ">{tag}</div>
+          <Tag tag={tag} />
           <h2 className="card-title">{title}</h2>
           <p className="text-base-content/70 font-title py-4 font-light">
             {description}
