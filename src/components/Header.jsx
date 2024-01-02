@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { social } from "../data";
+import { social } from "../data/links";
 //I removed bg-neutral
 function Header() {
   const iconStyle = "";

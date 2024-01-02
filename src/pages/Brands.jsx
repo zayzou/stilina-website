@@ -1,7 +1,7 @@
 import { SlMagnifierAdd } from "react-icons/sl";
 
 import MyReveal from "../utils/MyReveal";
-import { useFetchBrands } from "../data";
+import { useFetchBrands } from "../data/cms";
 function Brands() {
   const { loading, brands } = useFetchBrands();
 

@@ -3,7 +3,7 @@ import { FiPhone } from "react-icons/fi";
 import { FiMail } from "react-icons/fi";
 import { MdOutlineFax } from "react-icons/md";
 
-import { social } from "../data";
+import { social } from "../data/links";
 
 function Contact() {
   const iconStyle = "w-6 h-3 md:w-12 md:h-6";

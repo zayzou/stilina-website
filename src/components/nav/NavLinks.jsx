@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { menuLinks } from "../../data";
+import { menuLinks } from "../../data/links";
 
 function NavLinks() {
   return (

@@ -1,5 +1,5 @@
 import MyReveal from "../utils/MyReveal";
-import { useFetchMedia } from "../data";
+import { useFetchMedia } from "../data/cms";
 import Post from "../components/Post";
 import Loading from "../components/Loading";
 

@@ -1,4 +1,4 @@
-import { social } from "../data";
+import { social } from "../data/links";
 import { FaS } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 function Footer() {
