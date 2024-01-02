@@ -48,7 +48,7 @@ export const router = createBrowserRouter([
       { path: "/contact", element: <Contact /> },
     ],
   },
-  { path: "/media/:id", element: <SingleMedia /> },
+  { path: "/media/:id", element: <SingleMedia />, errorElement: <Error /> },
   { path: "/login", element: <Login />, errorElement: <Error /> },
   { path: "/register", element: <Register />, errorElement: <Error /> },
 ]);
