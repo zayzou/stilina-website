@@ -1,7 +1,8 @@
 import { useFetchSinglePost } from "../data/cms";
+import { useParams } from "react-router-dom";
 import { Footer, Loading, Tag } from "../components";
 function SingleMedia() {
-  const id = "3WXJRw35SaHO7utFx21yph";
+  const { id } = useParams();
   const { loading, post } = useFetchSinglePost(id);
   if (loading) {
     return <Loading />;
