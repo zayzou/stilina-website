@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import MyReveal from "../utils/MyReveal";
 import Tag from "./Tag";
 export default function Post({ post }) {
-  const { id, title, description, tag, img, date } = post;
+  const { id, title, tag, img, date } = post;
   const [hovered, setHovered] = useState(false);
   return (
     <MyReveal>

@@ -1,6 +1,6 @@
 import { SectionTitle } from "..";
 import { Link } from "react-router-dom";
-import { useFetchBrands } from "../../data";
+import { useFetchBrands } from "../../data/cms";
 import MyReveal from "../../utils/MyReveal";
 function OurBrands() {
   const { loading, brands } = useFetchBrands();

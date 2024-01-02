@@ -1,4 +1,4 @@
-import { useFetchSinglePost } from "../data";
+import { useFetchSinglePost } from "../data/cms";
 import { Footer, Loading, Tag } from "../components";
 function SingleMedia() {
   const id = "3WXJRw35SaHO7utFx21yph";
@@ -6,17 +6,14 @@ function SingleMedia() {
   if (loading) {
     return <Loading />;
   }
-  console.log(post);
   const { title, description, tag, image, date, url } = post;
-
-  const imgSrc = image?.fields?.file?.url;
 
   return (
     <>
       <div
         className="hero min-h-[60vh]"
         style={{
-          backgroundImage: `url(${imgSrc})`,
+          backgroundImage: `url(${image})`,
           backgroundSize: "auto",
         }}
       >
