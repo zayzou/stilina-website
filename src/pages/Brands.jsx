@@ -1,5 +1,5 @@
 import { SlMagnifierAdd } from "react-icons/sl";
-
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import MyReveal from "../utils/MyReveal";
 import { useFetchBrands } from "../data/cms";
 function Brands() {
@@ -29,7 +29,7 @@ function Brands() {
       </MyReveal>
       <div className="flex flex-col gap-4 py-10"></div>
       <div className="flex flex-col gap-16 ">
-        {brands.map(({ name, img, description, title, id }) => {
+        {brands.map(({ name, img, description, title, id, details }) => {
           return (
             <div key={id}>
               <MyReveal>
@@ -52,10 +52,10 @@ function Brands() {
                         </span>
                       </div>
                     </div>
-                    <div
-                      dangerouslySetInnerHTML={{ __html: description }}
-                      className="prose prose-sm md:prose-md prose-li:my-0 prose-ul:leading-none prose-li:leading-normal prose-p:my-2 prose-ul:my-2 text-md [text-wrap:balance]"
-                    ></div>
+                    <div className="prose prose-sm md:prose-md prose-li:my-0 prose-ul:leading-none prose-li:leading-normal prose-p:my-2 prose-ul:my-2 text-md [text-wrap:balance]">
+                      {" "}
+                      {details && documentToReactComponents(details)}
+                    </div>
                   </div>
                   <div className="col-span-5 row-start-1 flex flex-col gap-6 xl:col-span-3 rounded-box">
                     <a

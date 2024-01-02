@@ -1,4 +1,5 @@
 import { createClient } from "contentful";
+
 import { useState, useEffect } from "react";
 const client = createClient({
   space: "8sdirxbcrn01",
@@ -17,11 +18,12 @@ export const useFetchBrands = () => {
         content_type: "stilinaBrands",
       });
       const brands = response.items.map((item) => {
-        const { name, title, image, logo, description } = item.fields;
+        const { name, title, image, logo, description, details } = item.fields;
+
         const id = item.sys.id;
         const img = image.fields?.file?.url;
         const brandLogo = logo.fields?.file?.url;
-        return { id, name, title, img, brandLogo, description };
+        return { id, name, title, img, brandLogo, description, details };
       });
       setBrands(brands);
       setLoading(false);
