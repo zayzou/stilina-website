@@ -30,9 +30,7 @@ export default function Post({ post }) {
         <div className="card-body  ">
           <Tag tag={tag} />
           <h2 className="card-title">{title}</h2>
-          <p className="text-base-content/70 font-title py-4 font-light">
-            {description}
-          </p>
+
           <div className="card-actions">
             <span className="text-sm">Le {formatDate(date)}</span>
           </div>

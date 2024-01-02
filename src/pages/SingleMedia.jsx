@@ -7,7 +7,7 @@ function SingleMedia() {
     return <Loading />;
   }
   console.log(post);
-  const { title, description, tag, image, date } = post;
+  const { title, description, tag, image, date, url } = post;
 
   const imgSrc = image?.fields?.file?.url;
 
@@ -34,24 +34,10 @@ function SingleMedia() {
           style={{ maxWidth: "fit-content" }}
         >
           <Tag tag={tag} />
-          <div>
-            <h1>Stilina sous les projecteurs de l'ENTV</h1>
-            <p>
-              Nous sommes ravis d'annoncer que Stilina a récemment été présentée
-              sur la chaîne de télévision nationale ENTV. Cet événement marque
-              une étape significative pour notre entreprise, offrant une
-              visibilité nationale à nos produits innovants. L'interview a mis
-              en lumière notre engagement envers la qualité et l'innovation,
-              soulignant notre impact croissant dans l'industrie. Nous sommes
-              reconnaissants envers l'équipe de l'ENTV pour cette opportunité
-              exceptionnelle. C'est une validation de nos efforts constants pour
-              offrir des solutions exceptionnelles. Nous attendons avec
-              impatience de continuer à servir notre communauté avec passion et
-              détermination. Merci à tous nos clients et partenaires pour leur
-              soutien continu.
-            </p>
-            <p>{description}</p>
-          </div>
+          <div dangerouslySetInnerHTML={{ __html: description }}></div>
+          <a href={url} target="_blank">
+            Voir plus
+          </a>
         </div>
       </main>
       <Footer />

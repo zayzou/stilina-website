@@ -80,6 +80,7 @@ export const useFetchSinglePost = (id) => {
   const getSinglePost = async () => {
     try {
       const response = await client.getEntry(id);
+      console.log(response.fields);
       setPost(response.fields);
       setLoading(false);
     } catch (error) {
