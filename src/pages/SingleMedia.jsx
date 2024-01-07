@@ -1,41 +1,46 @@
 import { useFetchSinglePost } from "../data/cms";
 import { useParams } from "react-router-dom";
-import { Footer, Loading, Tag } from "../components";
+import { Footer, Loading, Tag, Date } from "../components";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 function SingleMedia() {
   const { id } = useParams();
   const { loading, post } = useFetchSinglePost(id);
   if (loading) {
     return <Loading />;
   }
-  const { title, description, tag, image, date, url } = post;
+  const { title, description, tag, image, date, url, body } = post;
 
   return (
     <>
-      <div
-        className="hero min-h-[60vh]"
+      <header
+        className="hero w-full min-h-[60vh]"
         style={{
           backgroundImage: `url(${image})`,
-          backgroundSize: "auto",
         }}
       >
+        <div className="hero-overlay bg-opacity-60"></div>
+
         <div className="hero-content text-center text-neutral-content">
-          <div className="max-w-md">
-            <h1 className="capitalize font-title text-white text-3xl font-extrabold lg:text-5xl ">
-              {title}
-            </h1>
+          <div className="">
+            <h1 className="mb-5 text-5xl font-bold">{title}</h1>
           </div>
         </div>
-      </div>
-      <main className="px-4 mx-auto max-w-screen-xl mt-[-10rem] rounded-lg bg-white">
+      </header>
+      <main className="px-4 mx-auto max-w-[85vw] lg:max-w-[75vw] mt-[-10rem] rounded-lg bg-white z-10 relative">
         <div
-          className="prose prose-sm md:prose-base p-10"
+          className="prose prose-sm md:prose-base p-5 md:p-10"
           style={{ maxWidth: "fit-content" }}
         >
-          <Tag tag={tag} />
-          <div dangerouslySetInnerHTML={{ __html: description }}></div>
-          <a href={url} target="_blank">
-            Voir plus
-          </a>
+          <div className="flex justify-between mb-4">
+            <Tag tag={tag} />
+            <Date date={date} />
+          </div>
+          <div> {body && documentToReactComponents(body)}</div>
+          {url && (
+            <a href={url} target="_blank">
+              Voir plus
+            </a>
+          )}
         </div>
       </main>
       <Footer />
