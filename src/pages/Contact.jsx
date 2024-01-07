@@ -64,13 +64,14 @@ function Contact() {
       <div className="card bg-base-200 shadow-xl">
         <div className="card-body">
           <h2 className="card-title">Que souhaitez-vous demander ?</h2>
-          <form>
+          <form action="https://formspree.io/f/mvoeonrn" method="POST">
             <label className="form-control w-full mb-5">
               <div className="label">
                 <span className="label-text">Nom complet</span>
               </div>
               <input
                 type="text"
+                name="name"
                 placeholder="Votre nom"
                 className="input input-bordered w-full"
               />
@@ -81,6 +82,7 @@ function Contact() {
               </div>
               <input
                 type="email"
+                name="_replyto"
                 placeholder="abcd@email.com"
                 className="input input-bordered w-full"
               />
@@ -91,16 +93,22 @@ function Contact() {
               </div>
               <textarea
                 className="textarea textarea-bordered"
+                name="message"
                 placeholder="Message"
               ></textarea>
             </label>
+            <input
+              type="hidden"
+              name="_subject"
+              id="email-subject"
+              value="Contact Form Submission"
+            ></input>
+            <div className="card-actions justify-stretch">
+              <button type="submit" className="btn btn-neutral flex-auto">
+                Contactez-nous
+              </button>
+            </div>
           </form>
-
-          <div className="card-actions justify-stretch">
-            <button className="btn btn-neutral flex-auto">
-              Contactez-nous
-            </button>
-          </div>
         </div>
       </div>
     </div>
