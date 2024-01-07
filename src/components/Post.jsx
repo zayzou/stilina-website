@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import MyReveal from "../utils/MyReveal";
 import Tag from "./Tag";
+import Date from "./Date";
 export default function Post({ post }) {
   const { id, title, tag, img, date } = post;
   const [hovered, setHovered] = useState(false);
@@ -32,7 +33,7 @@ export default function Post({ post }) {
           <h2 className="card-title">{title}</h2>
 
           <div className="card-actions">
-            <span className="text-sm">Le {formatDate(date)}</span>
+            <Date date={date} />
           </div>
         </div>
       </Link>
