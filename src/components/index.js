@@ -13,3 +13,4 @@ export { default as Media } from "./landingPage/Media";
 export { default as Post } from "./Post";
 export { default as Loading } from "./Loading";
 export { default as Tag } from "./Tag";
+export { default as Date } from "./Date";
