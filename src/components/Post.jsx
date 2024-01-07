@@ -11,7 +11,7 @@ export default function Post({ post }) {
     <MyReveal>
       <Link
         to={`/media/${id}`}
-        className="card  bg-base-100 shadow-xl "
+        className="card card-compact bg-base-100 shadow-xl "
         key={id}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
@@ -31,7 +31,6 @@ export default function Post({ post }) {
         <div className="card-body  ">
           <Tag tag={tag} />
           <h2 className="card-title">{title}</h2>
-
           <div className="card-actions">
             <Date date={date} />
           </div>
