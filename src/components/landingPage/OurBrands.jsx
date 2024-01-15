@@ -1,11 +1,11 @@
 import { SectionTitle } from "..";
 import { Link } from "react-router-dom";
 import { useFetchBrands } from "../../data/cms";
-import MyReveal from "../../utils/MyReveal";
+import Reveal from "../../utils/Reveal";
 function OurBrands() {
   const { loading, brands } = useFetchBrands();
   return (
-    <MyReveal>
+    <Reveal>
       <div className="pt-24">
         <div className="bg-base-200 p-12 rounded-lg">
           <SectionTitle text="Nos marques" align="text-center" />
@@ -47,7 +47,7 @@ function OurBrands() {
           </div>
         </div>
       </div>
-    </MyReveal>
+    </Reveal>
   );
 }
 

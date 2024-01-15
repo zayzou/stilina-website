@@ -14,3 +14,24 @@
 .debug-blue {
   border: 1px blue solid !important;
 }
+
+/* Drift zoom */
+
+#thumbnail-container img {
+  max-width: 100%;
+  display: block;
+}
+
+#thumbnail-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  float: left;
+}
+
+#details-container {
+  position: relative;
+  float: left;
+  width: 250px;
+  height: 250px;
+}

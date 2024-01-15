@@ -1,10 +1,10 @@
 import { NavLink } from "react-router-dom";
-import { menuLinks } from "../../data/links";
+import { links } from "../../utils/constants";
 
 function NavLinks() {
   return (
     <>
-      {menuLinks.map(({ id, url, text }) => (
+      {links.map(({ id, url, text }) => (
         <li key={id}>
           <NavLink
             className="capitalize px-5 py-3 text-sm tracking-wider  rounded-full hover:shadow-2xl "

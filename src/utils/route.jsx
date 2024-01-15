@@ -15,13 +15,13 @@ import {
   Media,
   Contact,
   SingleMedia,
-} from "./pages";
+} from "../pages";
 
 //like 404 page
-import { ErrorElement } from "./components";
+import { ErrorElement } from "../components";
 
 // loaders --- data loader
-import { loader as landingLoader } from "./pages/Landing";
+import { loader as landingLoader } from "../pages/Landing";
 
 // actions
 export const router = createBrowserRouter([
@@ -44,7 +44,6 @@ export const router = createBrowserRouter([
       { path: "/about", element: <About /> },
       { path: "/brands", element: <Brands /> },
       { path: "/media", element: <Media /> },
-
       { path: "/contact", element: <Contact /> },
     ],
   },

@@ -1,6 +1,7 @@
 import { FeaturedProducts, Hero, Media, OurBrands } from "../components";
-import { customAxiosInstance } from "../utils/index";
-import { products } from "../data/links";
+import { customAxiosInstance } from "../utils/constants";
+import { products } from "../data/cms";
+
 const url = "products?featured=true";
 
 export const loader = async () => {

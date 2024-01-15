@@ -1,14 +1,14 @@
-import { formatDate } from "../utils";
+import { formatDate } from "../utils/helpers";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import MyReveal from "../utils/MyReveal";
+import Reveal from "../utils/Reveal";
 import Tag from "./Tag";
 import Date from "./Date";
 export default function Post({ post }) {
   const { id, title, tag, img, date } = post;
   const [hovered, setHovered] = useState(false);
   return (
-    <MyReveal>
+    <Reveal>
       <Link
         to={`/media/${id}`}
         className="card card-compact bg-base-100 shadow-xl "
@@ -36,6 +36,6 @@ export default function Post({ post }) {
           </div>
         </div>
       </Link>
-    </MyReveal>
+    </Reveal>
   );
 }

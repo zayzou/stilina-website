@@ -7,8 +7,8 @@ import exportation from "../assets/images/exportation.jpeg";
 import production from "../assets/images/production.jpeg";
 import retail from "../assets/images/retail.jpeg";
 import international from "../assets/images/international.jpeg";
-import MyReveal from "../utils/MyReveal";
-import Reveal from "../utils/MyReveal";
+import Reveal from "../utils/Reveal";
+
 const About = () => {
   const services = [
     {
@@ -50,11 +50,11 @@ const About = () => {
         />
 
         <div className="align-element py-20">
-          <MyReveal>
+          <Reveal>
             <h1 className="max-w-2xl text-4xl font-bold tracking-tight  sm:text-6xl ">
               Notre mission
             </h1>
-          </MyReveal>
+          </Reveal>
           <Reveal>
             <p className="mt-8 max-w-xl text-lg leading-8 text-justify	">
               La <strong>Sarl Madani Scolaire et Bureau</strong>, créée en 2012

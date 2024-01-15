@@ -5,7 +5,7 @@ import carousel05 from "../../assets/images/carousel-05.webp";
 import carousel06 from "../../assets/images/carousel-06.webp";
 import carousel07 from "../../assets/images/carousel-07.jpeg";
 import { Link } from "react-router-dom";
-import MyReveal from "../../utils/MyReveal";
+import Reveal from "../../utils/Reveal";
 function Hero() {
   const carouselImages = [
     carousel01,
@@ -18,7 +18,7 @@ function Hero() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 item-center">
       <div className="mb-2 mt-4">
-        <MyReveal>
+        <Reveal>
           <div className="badge badge-outline text-xs">
             Plus de 2600m d'écriture.
           </div>
@@ -30,7 +30,7 @@ function Hero() {
             </span>{" "}
             écriture.
           </h1>
-        </MyReveal>
+        </Reveal>
         <p className="mt-8 max-w-xl text-base-content/70 font-title  font-light md:text-lg xl:text-2xl">
           La qualité de nos produits et notre engagement a constament renforcer
           notre position de leader sur le marché.
@@ -41,7 +41,7 @@ function Hero() {
           </Link>
         </div>
       </div>
-      <MyReveal direction="x">
+      <Reveal direction="x">
         <div className="h-[12rem] lg:h-[28rem] carousel carousel-center p-4 space-x-4 bg-neutral rounded-box">
           {carouselImages.map((image, index) => {
             return (
@@ -54,7 +54,7 @@ function Hero() {
             );
           })}
         </div>
-      </MyReveal>
+      </Reveal>
     </div>
   );
 }

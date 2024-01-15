@@ -1,9 +1,9 @@
-import { social } from "../data/links";
+import { socials } from "../utils/constants";
 import { FaS } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 function Footer() {
   const iconStyle = "w-6 h-6";
-  const socialLink = social(iconStyle);
+  const socialLink = socials(iconStyle);
   return (
     <>
       <footer className=" footer p-10 bg-neutral text-neutral-content">

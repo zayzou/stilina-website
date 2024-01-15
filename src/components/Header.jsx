@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import { social } from "../data/links";
+import { socials } from "../utils/constants";
 //I removed bg-neutral
 function Header() {
   const iconStyle = "";
-  const socialLink = social(iconStyle);
+  const socialLink = socials(iconStyle);
   return (
     <header className="bg-neutral py-2 text-neutral-content">
       <div className="flex-col gap-10 align-element flex justify-center sm:justify-end sm:flex-row">

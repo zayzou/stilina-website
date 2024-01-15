@@ -1,6 +1,6 @@
 import { Link, useLoaderData } from "react-router-dom";
-import { formatPrice } from "../../utils";
-import MyReveal from "../../utils/MyReveal";
+import { formatPrice } from "../../utils/helpers";
+import Reveal from "../../utils/Reveal";
 function ProductsGrid({ products }) {
   // const { products } = useLoaderData();
   // console.log(products);
@@ -8,7 +8,7 @@ function ProductsGrid({ products }) {
     <div className="pt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
       {products.map(({ id, title, image, price }) => {
         return (
-          <MyReveal key={id}>
+          <Reveal key={id}>
             <Link
               to={`/products/${id}`}
               className="card w-full shadow-xl hover:shadow-2xl transition duration-300"
@@ -27,7 +27,7 @@ function ProductsGrid({ products }) {
                 <span className="text-secondary">{formatPrice(price)}</span>
               </div>
             </Link>
-          </MyReveal>
+          </Reveal>
         );
       })}
     </div>

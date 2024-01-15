@@ -1,5 +1,7 @@
 import { createClient } from "contentful";
-
+import produit1 from "../assets/images/carousel-06.webp";
+import produit2 from "../assets/images/carousel-07.jpeg";
+import produit3 from "../assets/images/carousel-04.webp";
 import { useState, useEffect } from "react";
 const client = createClient({
   space: "8sdirxbcrn01",
@@ -88,3 +90,26 @@ export const useFetchSinglePost = (id) => {
   }, []);
   return { loading, post };
 };
+
+//temp use local product
+
+export const products = [
+  {
+    id: 1,
+    title: "Stilina Stylos Stilor",
+    image: produit1,
+    price: 42400,
+  },
+  {
+    id: 2,
+    title: "Rapporteur 40cm T. Blanc",
+    image: produit2,
+    price: 4400,
+  },
+  {
+    id: 3,
+    title: "Kangaro Agrafeuses ",
+    image: produit3,
+    price: 8900,
+  },
+];

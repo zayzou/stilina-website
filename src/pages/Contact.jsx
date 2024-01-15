@@ -3,11 +3,11 @@ import { FiPhone } from "react-icons/fi";
 import { FiMail } from "react-icons/fi";
 import { MdOutlineFax } from "react-icons/md";
 
-import { social } from "../data/links";
+import { socials } from "../utils/constants";
 
 function Contact() {
   const iconStyle = "w-6 h-3 md:w-12 md:h-6";
-  const socialLink = social(iconStyle);
+  const socialLink = socials(iconStyle);
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center ">
       <div className="flex flex-col gap-10">

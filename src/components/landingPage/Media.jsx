@@ -1,11 +1,11 @@
 // Used In landing page
 import { Link } from "react-router-dom";
-import MyReveal from "../../utils/MyReveal";
+import Reveal from "../../utils/Reveal";
 function Media() {
   return (
     <section className="pt-12">
       <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-        <MyReveal>
+        <Reveal>
           <div className="font-light sm:text-lg">
             <h2 className="font-title mx-auto text-[clamp(1.5rem,6vw,3rem)] font-black  [&::selection]:text-base-content relative col-start-1 row-start-1 leading-tight motion-reduce:!opacity-100 [&::selection]:bg-blue-700/20 bg-[linear-gradient(90deg,theme(colors.error)_0%,theme(colors.secondary)_9%,theme(colors.secondary)_42%,theme(colors.primary)_47%,theme(colors.accent)_100%)] bg-clip-text [-webkit-text-fill-color:transparent] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,oklch(var(--s))_4%,color-mix(in_oklch,oklch(var(--s)),oklch(var(--er)))_22%,oklch(var(--p))_45%,color-mix(in_oklch,oklch(var(--p)),oklch(var(--a)))_67%,oklch(var(--a))_100.2%)]">
               <span>News & Media</span>
@@ -24,8 +24,8 @@ function Media() {
               Voir tout
             </Link>
           </div>
-        </MyReveal>
-        <MyReveal direction="x">
+        </Reveal>
+        <Reveal direction="x">
           <div className="grid grid-cols-1 gap-4 mt-8">
             <iframe
               className=" rounded-xl w-full"
@@ -36,7 +36,7 @@ function Media() {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             ></iframe>
           </div>
-        </MyReveal>
+        </Reveal>
       </div>
     </section>
   );
