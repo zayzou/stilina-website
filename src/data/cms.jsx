@@ -95,7 +95,7 @@ export const useFetchSinglePost = (id) => {
 
 export const products = [
   {
-    id: 31,
+    id: 22,
     title: "Stilina Stylos Stilor",
     image: produit1,
     price: 42400,
