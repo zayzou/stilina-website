@@ -6,11 +6,9 @@ import {
   Checkout,
   Error,
   HomeLayout,
-  Login,
   Orders,
   SingleProduct,
   Products,
-  Register,
   Brands,
   Media,
   Contact,
@@ -22,7 +20,7 @@ import { ErrorElement } from "../components";
 
 // loaders --- data loader
 import { loader as landingLoader } from "../pages/Landing";
-
+import { loader as singleProductLoader } from "../pages/SingleProduct";
 // actions
 export const router = createBrowserRouter([
   {
@@ -37,7 +35,11 @@ export const router = createBrowserRouter([
         loader: landingLoader,
       },
       { path: "/products", element: <Products /> },
-      { path: "/products/:id", element: <SingleProduct /> },
+      {
+        path: "/products/:id",
+        element: <SingleProduct />,
+        loader: singleProductLoader,
+      },
       { path: "/cart", element: <Cart /> },
       { path: "/checkout", element: <Checkout /> },
       { path: "/orders", element: <Orders /> },
@@ -48,6 +50,4 @@ export const router = createBrowserRouter([
     ],
   },
   { path: "/media/:id", element: <SingleMedia />, errorElement: <Error /> },
-  { path: "/login", element: <Login />, errorElement: <Error /> },
-  { path: "/register", element: <Register />, errorElement: <Error /> },
 ]);

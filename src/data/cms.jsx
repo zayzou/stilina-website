@@ -95,19 +95,19 @@ export const useFetchSinglePost = (id) => {
 
 export const products = [
   {
-    id: 1,
+    id: 31,
     title: "Stilina Stylos Stilor",
     image: produit1,
     price: 42400,
   },
   {
-    id: 2,
+    id: 12,
     title: "Rapporteur 40cm T. Blanc",
     image: produit2,
     price: 4400,
   },
   {
-    id: 3,
+    id: 21,
     title: "Kangaro Agrafeuses ",
     image: produit3,
     price: 8900,
