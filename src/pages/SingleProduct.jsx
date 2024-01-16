@@ -39,50 +39,58 @@ const SingleProduct = () => {
           </h4>
           <p className="mt-3 text-xl">{dinarAmount}</p>
           <p className="mt-6 leading-8">{description}</p>
-          <div className="mt-6">
-            <h3 className="text-md font-medium tracking-wider capitalize">
-              Couleurs
-            </h3>
-            <div className="mt-2">
-              {colors.map((color) => {
-                return (
-                  <button
-                    key={color}
-                    type="button"
-                    className={`badge w-6 h-6 mr-2  ${
-                      color === productColor && "border-2 border-secondary"
-                    }`}
-                    style={{ backgroundColor: color }}
-                    onClick={() => setProductColor(color)}
-                  ></button>
-                );
-              })}
-            </div>
-            <div className="mt-2">
-              <h3 className="text-md font-medium tracking-wider capitalize">
-                Quantité
+          <div class="bg-base-content/10 mx-1 my-10 h-px"></div>
+          <div className="mt-6 ">
+            <div className="grid grid-cols-3 lg:grid-cols-4 gap-2 items-center">
+              <h3 className="text-md font-medium tracking-wider capitalize col-span-1">
+                Couleurs :
               </h3>
+              <div className="mt-2 col-span-2">
+                {colors.map((color) => {
+                  return (
+                    <button
+                      key={color}
+                      type="button"
+                      className={`badge w-6 h-6 mr-2  ${
+                        color === productColor && "border-2 border-secondary"
+                      }`}
+                      style={{ backgroundColor: color }}
+                      onClick={() => setProductColor(color)}
+                    ></button>
+                  );
+                })}
+              </div>
+            </div>
+            <div className="mt-2 ">
               <div className="join mt-2">
                 <button
-                  className="btn btn-ghost join-item"
+                  className="btn btn-ghost join-item hover:bg-transparent"
                   onClick={() => amount > 0 && setAmount(amount - 1)}
                 >
                   <FaMinus />
                 </button>
                 <input
                   type="text"
-                  className="join-item text-xl w-16 text-center "
+                  className="join-item text-xl w-16 text-center bg-transparent"
                   value={amount}
                   readOnly
                 />
 
                 <button
-                  className="btn btn-ghost join-item"
+                  className="btn btn-ghost join-item hover:bg-transparent"
                   onClick={() => setAmount(amount + 1)}
                 >
                   <FaPlus />
                 </button>
               </div>
+            </div>
+            <div className="mt-10">
+              <button
+                className="btn btn-primary btn-md"
+                onClick={() => console.log(amount)}
+              >
+                Ajouter au panier
+              </button>
             </div>
           </div>
         </div>
