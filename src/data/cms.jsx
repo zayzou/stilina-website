@@ -2,6 +2,10 @@ import { createClient } from "contentful";
 import produit1 from "../assets/images/carousel-06.webp";
 import produit2 from "../assets/images/carousel-07.jpeg";
 import produit3 from "../assets/images/carousel-04.webp";
+import img1 from "../assets/images/PROD2_77.jpg";
+import img2 from "../assets/images/PROD2_78.jpg";
+import img3 from "../assets/images/PROD2_79.jpg";
+import img4 from "../assets/images/PROD2_80.jpg";
 import { useState, useEffect } from "react";
 const client = createClient({
   space: "8sdirxbcrn01",
@@ -113,3 +117,5 @@ export const products = [
     price: 8900,
   },
 ];
+
+export const images = [img1, img2, img3, produit1, produit2, produit3];
