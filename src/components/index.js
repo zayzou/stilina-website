@@ -15,3 +15,4 @@ export { default as Loading } from "./Loading";
 export { default as Tag } from "./Tag";
 export { default as Date } from "./Date";
 export { default as Breadcrumbs } from "./Breadcrumbs";
+export { default as Separator } from "./Separator";

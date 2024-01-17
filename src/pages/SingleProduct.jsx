@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import ProductImages from "../components/ProductImages";
 import { images } from "../data/cms";
-import { Breadcrumbs } from "../components";
+import { Breadcrumbs, Separator } from "../components";
 import Drift from "drift-zoom";
 export const loader = async ({ params }) => {
   const response = await customAxiosInstance.get(`/products/${params.id}`);
@@ -42,7 +42,7 @@ const SingleProduct = () => {
           </h4>
           <p className="mt-3 text-xl">{dinarAmount}</p>
           <p className="mt-6 leading-8">{description}</p>
-          <div className="bg-base-content/10 mx-1 my-10 h-px"></div>
+          <Separator />
           <div className="mt-6" id="cart">
             <div className="grid grid-cols-3 lg:grid-cols-4 gap-2 items-center">
               <h3 className="text-md font-medium tracking-wider capitalize col-span-1">
