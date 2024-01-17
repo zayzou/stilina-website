@@ -16,3 +16,6 @@ export { default as Tag } from "./Tag";
 export { default as Date } from "./Date";
 export { default as Breadcrumbs } from "./Breadcrumbs";
 export { default as Separator } from "./Separator";
+export { default as PaginationContainer } from "./productPage/PaginationContainer";
+export { default as Filters } from "./productPage/Filters";
+export { default as ProductContainer } from "./productPage/ProductContainer";
