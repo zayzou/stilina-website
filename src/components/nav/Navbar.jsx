@@ -6,7 +6,7 @@ import NavLinks from "./NavLinks";
 import { Link } from "react-router-dom";
 const themes = {
   winter: "light",
-  dracula: "dracula",
+  dracula: "dark",
 };
 
 const getThemeFromLocalStorage = () => {
