@@ -1,11 +1,11 @@
-import { Link, useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import { customAxiosInstance } from "../utils/constants";
 import { formatPrice } from "../utils/helpers";
 import { useEffect, useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import ProductImages from "../components/ProductImages";
 import { images } from "../data/cms";
-
+import { Breadcrumbs } from "../components";
 import Drift from "drift-zoom";
 export const loader = async ({ params }) => {
   const response = await customAxiosInstance.get(`/products/${params.id}`);
@@ -31,16 +31,8 @@ const SingleProduct = () => {
   });
   return (
     <section>
-      <div className="text-md breadcrumbs">
-        <ul>
-          <li>
-            <Link to="/">Accueil</Link>
-          </li>
-          <li>
-            <Link to="products">Produits</Link>
-          </li>
-        </ul>
-      </div>
+      <Breadcrumbs />
+
       <div className="mt-6 grid gap-y-8 md:grid-cols-2 md:gap-x-8 lg:gap-x-16 ">
         <ProductImages images={images} image={image} title={title} />
         <div className="details">
