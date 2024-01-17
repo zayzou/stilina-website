@@ -6,20 +6,24 @@ import imgSrc from "../assets/images/carousel-01.jpeg";
 const Products = () => {
   useEffect(() => {
     new Drift(document.querySelector(".drift-demo-trigger"), {
-      // Settings
-      paneContainer: document.querySelector("#details-container"),
-      inlinePane: 769,
-      inlineOffsetY: -85,
-      containInline: true,
-      hoverBoundingBox: true,
+      // paneContainer: document.querySelector(".details"),
+      inlinePane: true,
+      zoomFactor: 6,
     });
   });
   return (
     <div>
-      <div id="thumbnail-container">
-        <img className="drift-demo-trigger" data-zoom={imgSrc} src={imgSrc} />
+      <div className="columns">
+        <div className="column">
+          <div className="thumbnail-container">
+            <img
+              className="drift-demo-trigger"
+              data-zoom="https://awik.io/demo/webshop-zoom/shoe-large.jpg"
+              src="https://awik.io/demo/webshop-zoom/shoe-small.jpg"
+            />
+          </div>
+        </div>
       </div>
-      <div id="details-container" style={{ position: "relative" }}></div>
     </div>
   );
 };

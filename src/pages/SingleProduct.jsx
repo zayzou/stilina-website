@@ -30,7 +30,7 @@ const SingleProduct = () => {
       </div>
       <div className="mt-6 grid gap-y-8 lg:grid-cols-2 lg:gap-x-16">
         <ProductImages images={images} image={image} title={title} />
-        <div>
+        <div id="details">
           <h1 className="capitalize text-3xl font-bold">{title}</h1>
           <h4 className=" text-xl text-neutral-content font-bold mt-2">
             {company}
@@ -38,7 +38,7 @@ const SingleProduct = () => {
           <p className="mt-3 text-xl">{dinarAmount}</p>
           <p className="mt-6 leading-8">{description}</p>
           <div className="bg-base-content/10 mx-1 my-10 h-px"></div>
-          <div className="mt-6 ">
+          <div className="mt-6" id="cart">
             <div className="grid grid-cols-3 lg:grid-cols-4 gap-2 items-center">
               <h3 className="text-md font-medium tracking-wider capitalize col-span-1">
                 Couleurs :
@@ -59,7 +59,7 @@ const SingleProduct = () => {
                 })}
               </div>
             </div>
-            <div className="mt-2 ">
+            <div className="mt-2">
               <div className="join mt-2">
                 <button
                   className="btn btn-ghost join-item hover:bg-transparent"

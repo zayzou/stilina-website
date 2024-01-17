@@ -26,7 +26,7 @@ export const links = [
   { id: 3, url: "brands", text: "Marques" },
   { id: 4, url: "media", text: "Media" },
   { id: 5, url: "contact", text: "Contact" },
-  { id: 6, url: "orders", text: "Produits" },
+  { id: 6, url: "products", text: "Produits" },
 ];
 
 export const product_url = "https://strapi-store-server.onrender.com/api";
