@@ -1,13 +1,14 @@
 import { useState } from "react";
 
-const ProductImages = ({ images, image, title }) => {
-  const [img, setImage] = useState(images[0]);
+const ProductImages = ({ images, title }) => {
+  const [image, setImage] = useState(images[0]);
+
   return (
     <section>
       <img
-        src={img}
+        src={image}
         alt={`image de produit ${title}`}
-        className="w-96 h-[96] object-cover lg:w-full"
+        className="h-[400px]  lg:w-full"
       />
       <div className="mt-2 grid grid-cols-5 gap-3">
         {images.map((img, index) => {
@@ -15,7 +16,10 @@ const ProductImages = ({ images, image, title }) => {
             <img
               key={index}
               src={img}
-              className="w-full cursor-pointer h-[100px] active:border-2 border-secondary brightness-75"
+              className={`w-full object-cover cursor-pointer h-[75px] border-secondary brightness-75 rounded-box ${
+                image === img ? "border-2" : null
+              }`}
+              onClick={() => setImage(img)}
             />
           );
         })}

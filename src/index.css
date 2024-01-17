@@ -17,12 +17,12 @@
 
 /* Drift zoom */
 
-#thumbnail-container img {
+/* #thumbnail-container img {
   max-width: 100%;
   display: block;
-}
+} */
 
-#thumbnail-container {
+/* #thumbnail-container {
   position: relative;
   width: 100%;
   height: 100%;
@@ -34,4 +34,4 @@
   float: left;
   width: 250px;
   height: 250px;
-}
+} */
