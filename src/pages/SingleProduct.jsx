@@ -1,10 +1,12 @@
 import { Link, useLoaderData } from "react-router-dom";
 import { customAxiosInstance } from "../utils/constants";
 import { formatPrice } from "../utils/helpers";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import ProductImages from "../components/ProductImages";
 import { images } from "../data/cms";
+
+import Drift from "drift-zoom";
 export const loader = async ({ params }) => {
   const response = await customAxiosInstance.get(`/products/${params.id}`);
   return { product: response.data.data };
@@ -16,6 +18,17 @@ const SingleProduct = () => {
   const [productColor, setProductColor] = useState(colors[0]);
   const [amount, setAmount] = useState(0);
   const dinarAmount = formatPrice(price);
+
+  // Drift config
+  useEffect(() => {
+    new Drift(document.querySelector(".drift-trigger"), {
+      paneContainer: document.querySelector(".details"),
+      inlinePane: 769,
+      inlineOffsetY: -85,
+      containInline: true,
+      hoverBoundingBox: true,
+    });
+  });
   return (
     <section>
       <div className="text-md breadcrumbs">
@@ -28,9 +41,9 @@ const SingleProduct = () => {
           </li>
         </ul>
       </div>
-      <div className="mt-6 grid gap-y-8 lg:grid-cols-2 lg:gap-x-16">
+      <div className="mt-6 grid gap-y-8 md:grid-cols-2 md:gap-x-8 lg:gap-x-16 ">
         <ProductImages images={images} image={image} title={title} />
-        <div id="details">
+        <div className="details">
           <h1 className="capitalize text-3xl font-bold">{title}</h1>
           <h4 className=" text-xl text-neutral-content font-bold mt-2">
             {company}

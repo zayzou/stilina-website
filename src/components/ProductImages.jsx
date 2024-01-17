@@ -1,24 +1,16 @@
-import { useEffect, useState } from "react";
-import Drift from "drift-zoom";
+import { useState } from "react";
 const ProductImages = ({ images, title }) => {
   const [image, setImage] = useState(images[0]);
 
-  useEffect(() => {
-    new Drift(document.querySelector(".drift-trigger"), {
-      //   paneContainer: document.querySelector(".details"),
-      inlinePane: true,
-      zoomFactor: 6,
-    });
-  });
   return (
-    <section>
+    <section className="">
       <img
         src={image}
         data-zoom={image}
         alt={`image de produit ${title}`}
         className="h-[400px]  lg:w-full drift-trigger"
       />
-      <div className="mt-2 grid grid-cols-5 gap-3">
+      <div className="mt-2 grid grid-cols-3 md:grid-cols-4  gap-3">
         {images.map((img, index) => {
           return (
             <img

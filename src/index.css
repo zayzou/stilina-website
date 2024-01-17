@@ -14,3 +14,9 @@
 .debug-blue {
   border: 1px blue solid !important;
 }
+.details {
+  position: relative;
+  width: 100%;
+  height: 59%;
+  float: left;
+}
