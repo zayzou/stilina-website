@@ -24,6 +24,5 @@ dist-ssr
 *.sw?
 
 
-#Temp files
-src/utils/Reveal.jsx
+
 .env
