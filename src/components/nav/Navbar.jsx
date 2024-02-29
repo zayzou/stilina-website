@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { BsCart3, BsMoonFill, BsSunFill } from "react-icons/bs";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
@@ -6,8 +6,8 @@ import NavLinks from "./NavLinks";
 import {Link} from "react-router-dom";
 
 const themes = {
-    winter: "light",
-    dracula: "dark",
+    winter: "winter",
+    dracula: "dracula",
 };
 
 const getThemeFromLocalStorage = () => {

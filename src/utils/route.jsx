@@ -54,9 +54,9 @@ export const router = createBrowserRouter([
             {path: "/about", element: <About/>},
             {path: "/brands", element: <Brands/>},
             {path: "/media", element: <Media/>},
-            {path: "/login", element: <Login/>},
             {path: "/contact", element: <Contact/>},
         ],
     },
+    {path: "/login", element: <Login/>},
     {path: "/media/:id", element: <SingleMedia/>, errorElement: <Error/>},
 ]);
