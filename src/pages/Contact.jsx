@@ -2,10 +2,9 @@ import {FiMapPin} from "react-icons/fi";
 import {FiPhone} from "react-icons/fi";
 import {FiMail} from "react-icons/fi";
 import {MdOutlineFax} from "react-icons/md";
-
 import {socials} from "../utils/constants";
-import {FormInput} from "../components/FormInput.jsx";
-import {SubmitBtn} from "../components/SubmitBtn.jsx";
+import {FormInput,SubmitBtn} from "../components";
+
 
 function Contact() {
     const iconStyle = "w-6 h-3 md:w-12 md:h-6";
