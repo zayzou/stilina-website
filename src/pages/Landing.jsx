@@ -5,8 +5,8 @@ import { products } from "../data/cms";
 const url = "products?featured=true";
 
 export const loader = async () => {
-  const response = await customAxiosInstance(url);
-  const products = response.data.data;
+/*  const response = await customAxiosInstance(url);
+  const products = response.data.data;*/
   return { products };
 };
 function Landing() {
