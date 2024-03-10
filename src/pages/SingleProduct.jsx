@@ -44,8 +44,9 @@ const SingleProduct = () => {
         }
     });
 
-    const handlePvSelect = (color) => {
+    const handlePvSelect = ({color,sku}) => {
         setProductColor(color)
+        setProductRef(sku)
     }
 
     return (
@@ -93,7 +94,7 @@ const SingleProduct = () => {
                                                 pv.color === productColor && "border-2 border-accent"
                                             }`}
                                             style={{backgroundColor: pv.color}}
-                                            onClick={() => handlePvSelect(pv.color)}
+                                            onClick={() => handlePvSelect(pv)}
                                         ></button>
                                     );
                                 })}
