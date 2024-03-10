@@ -25,7 +25,8 @@ const SingleProduct = () => {
         images,
         productVariants
     } = product
-    const [productColor, setProductColor] = useState(productVariants[0]?.color);
+
+
     const [productRef, setProductRef] = useState(productVariants[0]?.sku);
     const [amount, setAmount] = useState(0);
 
@@ -44,8 +45,7 @@ const SingleProduct = () => {
         }
     });
 
-    const handlePvSelect = ({color,sku}) => {
-        setProductColor(color)
+    const handlePvSelect = (sku) => {
         setProductRef(sku)
     }
 
@@ -82,22 +82,17 @@ const SingleProduct = () => {
                     <div className="mt-6" id="cart">
                         <div>
                             <h3 className="text-md font-medium tracking-wider capitalize col-span-1">
-                                Couleur du corps :
+                                Sous Emballage :
                             </h3>
                             <div className="mt-2 col-span-2">
-                                {productVariants.map((pv) => {
-                                    return (
-                                        <button
-                                            key={pv.sku}
-                                            type="button"
-                                            className={`badge w-8 h-8 mr-4  ${
-                                                pv.color === productColor && "border-2 border-accent"
-                                            }`}
-                                            style={{backgroundColor: pv.color}}
-                                            onClick={() => handlePvSelect(pv)}
-                                        ></button>
-                                    );
-                                })}
+                                <select className="select select-bordered w-full max-w-xs"
+                                        onChange={(e) => handlePvSelect(e.target.value)}>
+                                    {productVariants.map((pv) => {
+                                        return (
+                                            <option key={pv.sku} value={pv.sku}>{pv.packaging.name}</option>
+                                        );
+                                    })}
+                                </select>
                             </div>
                         </div>
                         <div className="flex items-center mt-10 gap-4">
