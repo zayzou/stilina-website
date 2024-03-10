@@ -1,23 +1,27 @@
-import { FeaturedProducts, Hero, Media, OurBrands } from "../components";
-import { customAxiosInstance } from "../utils/constants";
-import { products } from "../data/cms";
+import {FeaturedProducts, Hero, Media, OurBrands} from "../components";
+import {customAxiosInstance} from "../utils/constants";
+import {useLoaderData} from "react-router-dom";
 
-const url = "products?featured=true";
+
+const url = "products/all?page=1&size=3";
 
 export const loader = async () => {
-/*  const response = await customAxiosInstance(url);
-  const products = response.data.data;*/
-  return { products };
+    const response = await customAxiosInstance(url);
+    const products = response.data.productDto;
+    return {products};
 };
+
 function Landing() {
-  return (
-    <>
-      <Hero />
-      <FeaturedProducts products={products} />
-      <OurBrands />
-      <Media />
-    </>
-  );
+
+    const {products} = useLoaderData();
+    return (
+        <>
+            <Hero/>
+            <FeaturedProducts products={products}/>
+            <OurBrands/>
+            <Media/>
+        </>
+    );
 }
 
 export default Landing;

@@ -1,23 +1,22 @@
-import { useLoaderData } from "react-router-dom";
-import { Filters, PaginationContainer, ProductContainer } from "../components";
-import { customAxiosInstance } from "../utils/constants";
+import {useLoaderData} from "react-router-dom";
+import {Filters, PaginationContainer, ProductContainer} from "../components";
+import {customAxiosInstance} from "../utils/constants";
 
 export const loader = async () => {
-  const response = await customAxiosInstance.get("/products");
-
-  return { products: response.data.data, meta: response.data.meta };
+    const response = await customAxiosInstance.get("/products/all");
+    // console.log(response.data)
+    return {products: response.data.productDto,pagination:response.data.paginationDto};
 };
 const Products = () => {
-  const { products, meta } = useLoaderData();
-  console.log(products);
-  console.log(meta);
-  return (
-    <>
-      <Filters />
-      <ProductContainer products={products} />
-      <PaginationContainer />
-    </>
-  );
+    const {products,pagination} = useLoaderData();
+    console.log(pagination)
+    return (
+        <>
+            <Filters/>
+            <ProductContainer products={products}/>
+            <PaginationContainer/>
+        </>
+    );
 };
 
 export default Products;

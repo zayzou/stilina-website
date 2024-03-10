@@ -1,7 +1,7 @@
-import React from "react";
+import ProductsGrid from "../ProductsGrid.jsx";
 
-const ProductContainer = () => {
-  return <div>ProductContainer</div>;
+const ProductContainer = ({products}) => {
+    return <ProductsGrid products={products}/>;
 };
 
 export default ProductContainer;
