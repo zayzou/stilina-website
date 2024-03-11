@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useFetchBrands } from "../../data/cms";
 import Reveal from "../../utils/Reveal";
 function OurBrands() {
-  const { loading, brands } = useFetchBrands();
+  const {  brands } = useFetchBrands();
   return (
     <Reveal>
       <div className="pt-24">

@@ -1,14 +1,11 @@
 import Reveal from "../utils/Reveal";
 import { useFetchMedia } from "../data/cms";
 import Post from "../components/Post";
-import Loading from "../components/Loading";
 
 function Media() {
-  const { loading, media } = useFetchMedia();
+  const {  media } = useFetchMedia();
 
-  if (loading) {
-    return <Loading />;
-  }
+
   return (
     <>
       <Reveal>

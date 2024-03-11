@@ -2,13 +2,10 @@ import { SlMagnifierAdd } from "react-icons/sl";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Reveal from "../utils/Reveal";
 import { useFetchBrands } from "../data/cms";
-import { Loading } from "../components";
-function Brands() {
-  const { loading, brands } = useFetchBrands();
 
-  if (loading) {
-    return <Loading />;
-  }
+function Brands() {
+  const { brands } = useFetchBrands();
+
   return (
     <>
       <Reveal>
