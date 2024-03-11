@@ -1,8 +1,9 @@
-import {Form, useLoaderData, Link} from 'react-router-dom';
+import {Form, Link, useLoaderData} from 'react-router-dom';
 import {FormInput, FormSelect} from '../index.js';
 
 const Filters = () => {
-
+    const {meta} = useLoaderData();
+    const {categories, brands} = meta
     return (
         <Form
             className='bg-base-200 rounded-md px-8 py-4 grid gap-x-4  gap-y-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center'>
@@ -18,7 +19,7 @@ const Filters = () => {
             <FormSelect
                 label='Catégorie'
                 name='category'
-                list={[]}
+                list={['tout', ...categories]}
                 size='select-sm'
 
             />
@@ -26,7 +27,7 @@ const Filters = () => {
             <FormSelect
                 label='Marque'
                 name='brand'
-                list={[]}
+                list={['tout', ...brands,]}
                 size='select-sm'
 
             />
