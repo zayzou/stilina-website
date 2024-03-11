@@ -1,12 +1,12 @@
-import {Link} from "react-router-dom";
+import {Link, useLoaderData} from "react-router-dom";
 import Reveal from "../utils/Reveal.jsx";
 
-function ProductsList({products}) {
-    console.log(products)
+function ProductsList() {
+    const {products} = useLoaderData();
     return (
         <div className="mt-12 grid gap-y-8">
             {products.map(({id, name, image, category, brand}) => {
-                console.log(brand,category)
+                console.log(brand, category)
                 return (
                     <Reveal key={id}>
                         <Link

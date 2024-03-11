@@ -21,4 +21,5 @@ export {default as Filters} from "./productPage/Filters";
 export {default as ProductContainer} from "./productPage/ProductContainer";
 export {default as SubmitBtn} from "./SubmitBtn.jsx"
 export {default as FormInput} from "./FormInput.jsx"
+export {default as FormSelect} from "./FormSelect.jsx"
 export {default as ProductsList} from "./ProductsList.jsx"

@@ -1,8 +1,8 @@
-import {Link} from "react-router-dom";
+import {Link, useLoaderData} from "react-router-dom";
 import Reveal from "../utils/Reveal.jsx";
 
-function ProductsGrid({products}) {
-    console.log(products)
+function ProductsGrid() {
+    const {products} = useLoaderData();
     return (
         <div className="pt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {products.map(({id, name, image, brand}) => {
