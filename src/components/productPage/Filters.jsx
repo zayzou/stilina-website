@@ -35,7 +35,7 @@ const Filters = () => {
             <FormSelect
                 label='Trier par'
                 name='sort'
-                list={['a-z', 'z-a']}
+                list={['a-z', 'z-a', 'Ajouté récemment']}
                 size='select-sm'
 
             />
