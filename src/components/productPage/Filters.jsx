@@ -1,5 +1,6 @@
 import {Form, Link, useLoaderData} from 'react-router-dom';
 import {FormInput, FormSelect} from '../index.js';
+import {sortOptions} from "../../utils/constants.jsx";
 
 const Filters = () => {
     const {meta} = useLoaderData();
@@ -35,7 +36,7 @@ const Filters = () => {
             <FormSelect
                 label='Trier par'
                 name='sort'
-                list={['a-z', 'z-a', 'Ajouté récemment']}
+                list={Array.from(sortOptions.keys())}
                 size='select-sm'
 
             />

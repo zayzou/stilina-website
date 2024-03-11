@@ -36,3 +36,11 @@ export const my_product_url = "http://localhost:8080/api";
 export const customAxiosInstance = axios.create({
     baseURL: my_product_url,
 });
+
+
+const sortMap = new Map();
+sortMap.set("a-z", "name,asc");
+sortMap.set("z-a", "name,desc");
+sortMap.set("Ajouté récemment", "createdAt,desc");
+export const sortOptions = sortMap;
+
