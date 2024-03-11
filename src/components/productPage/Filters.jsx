@@ -6,7 +6,10 @@ const Filters = () => {
     const {meta, params} = useLoaderData();
     const {categories, brands} = meta
     const {search, category, brand, sort} = params
-    const defaultSortValue = Array.from(sortOptions.entries()).find(([k, v]) => v === sort)[0]
+
+
+    const defaultSortValue = sort ? Array.from(sortOptions.entries()).find(([k, v]) => v === sort)[0]
+        : sortOptions.get(sortOptions.keys().next())
 
 
     return (
