@@ -9,7 +9,7 @@ export const loader = async ({request}) => {
 
     params.sort = sortOptions.get(params.sort);
     const response = await customAxiosInstance.get("/products", {params});
-    return {products: response.data.productDto, meta: response.data.meta};
+    return {products: response.data.productDto, meta: response.data.meta, params};
 };
 const Products = () => {
     return (

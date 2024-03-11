@@ -3,8 +3,12 @@ import {FormInput, FormSelect} from '../index.js';
 import {sortOptions} from "../../utils/constants.jsx";
 
 const Filters = () => {
-    const {meta} = useLoaderData();
+    const {meta, params} = useLoaderData();
     const {categories, brands} = meta
+    const {search, category, brand, sort} = params
+    const defaultSortValue = Array.from(sortOptions.entries()).find(([k, v]) => v === sort)[0]
+
+
     return (
         <Form
             className='bg-base-200 rounded-md px-8 py-4 grid gap-x-4  gap-y-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center'>
@@ -14,7 +18,7 @@ const Filters = () => {
                 label='Rechercher un produit'
                 name='search'
                 size='input-sm'
-                defaultValue=""
+                defaultValue={search}
             />
             {/* CATEGORIES */}
             <FormSelect
@@ -22,6 +26,7 @@ const Filters = () => {
                 name='category'
                 list={['tout', ...categories]}
                 size='select-sm'
+                defaultValue={category}
 
             />
             {/* COMPANIES */}
@@ -30,6 +35,7 @@ const Filters = () => {
                 name='brand'
                 list={['tout', ...brands,]}
                 size='select-sm'
+                defaultValue={brand}
 
             />
             {/* ORDER */}
@@ -38,7 +44,7 @@ const Filters = () => {
                 name='sort'
                 list={Array.from(sortOptions.keys())}
                 size='select-sm'
-
+                defaultValue={defaultSortValue}
             />
 
             {/* BUTTONS */}
