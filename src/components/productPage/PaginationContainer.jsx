@@ -2,7 +2,7 @@ import {useLoaderData, useLocation, useNavigate} from "react-router-dom";
 
 const PaginationContainer = () => {
     const {meta} = useLoaderData();
-    const {totalPages, page: number} = meta.paginationDto;
+    const {totalPages, number} = meta.paginationDto;
     const pages = Array.from({length: totalPages}, (_, index) => {
         return index + 1;
     });
@@ -10,6 +10,7 @@ const PaginationContainer = () => {
     const navigate = useNavigate();
 
     const handlePageChange = (pageNumber) => {
+
         const searchParams = new URLSearchParams(search);
         searchParams.set("page", pageNumber);
         navigate(`${pathname}?${searchParams.toString()}`);
