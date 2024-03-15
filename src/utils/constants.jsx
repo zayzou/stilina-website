@@ -30,11 +30,11 @@ export const links = [
     {id: 6, url: "products", text: "Produits"},
 ];
 
-export const product_url = "https://strapi-store-server.onrender.com/api";
+export const product_url = "http://stilina-backend-dev.eba-32qdmrqn.ca-central-1.elasticbeanstalk.com/api";
 export const my_product_url = "http://localhost:8080/api";
 
 export const customAxiosInstance = axios.create({
-    baseURL: my_product_url,
+    baseURL: product_url,
 });
 
 
