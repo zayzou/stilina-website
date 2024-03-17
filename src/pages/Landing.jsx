@@ -1,8 +1,7 @@
 import {FeaturedProducts, Hero, Media, OurBrands} from "../components";
 import {customAxiosInstance} from "../utils/constants";
-import {useLoaderData} from "react-router-dom";
 
-const url = "/products?page=1&size=3";
+const url = "/products?page=1&size=3&brand=STILINA";
 
 export const loader = async () => {
     const response = await customAxiosInstance(url);
@@ -11,12 +10,10 @@ export const loader = async () => {
 };
 
 function Landing() {
-
-    const {products} = useLoaderData();
     return (
         <>
             <Hero/>
-            <FeaturedProducts products={products}/>
+            <FeaturedProducts/>
             <OurBrands/>
             <Media/>
         </>

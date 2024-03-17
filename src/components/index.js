@@ -4,6 +4,7 @@ export {default as NavLinks} from "./nav/NavLinks";
 export {default as Hero} from "./landingPage/Hero";
 export {default as ErrorElement} from "./ErrorElement";
 export {default as ProductsGrid} from "./ProductsGrid.jsx";
+export {default as ProductsInnerContainer} from "./ProductsInnerContainer.jsx";
 export {default as FeaturedProducts} from "./landingPage/FeaturedProducts";
 export {default as SectionTitle} from "./landingPage/SectionTitle";
 export {default as OurBrands} from "./landingPage/OurBrands";

@@ -2,23 +2,13 @@ import {FaFacebookF, FaYoutube, FaInstagram} from "react-icons/fa6";
 import axios from "axios";
 
 export const socials = (style) => {
-    return [
-        {
-            id: 1,
-            url: "https://www.twitter.com",
-            icon: <FaFacebookF className={style}/>,
-        },
-        {
-            id: 2,
-            url: "https://www.twitter.com",
-            icon: <FaYoutube className={style}/>,
-        },
-        {
-            id: 3,
-            url: "https://www.twitter.com",
-            icon: <FaInstagram className={style}/>,
-        },
-    ];
+    return [{
+        id: 1, url: "https://www.twitter.com", icon: <FaFacebookF className={style}/>,
+    }, {
+        id: 2, url: "https://www.twitter.com", icon: <FaYoutube className={style}/>,
+    }, {
+        id: 3, url: "https://www.twitter.com", icon: <FaInstagram className={style}/>,
+    },];
 };
 
 export const links = [
@@ -27,7 +17,7 @@ export const links = [
     {id: 3, url: "brands", text: "Marques"},
     {id: 4, url: "media", text: "Media"},
     {id: 5, url: "contact", text: "Contact"},
-    {id: 6, url: "products", text: "Produits"},
+    {id: 6, url: "products", text: "Produits", sub_menus: ["stilina", "kangaro"]}
 ];
 
 export const product_url = "http://stilina-backend-dev.eba-32qdmrqn.ca-central-1.elasticbeanstalk.com/api";

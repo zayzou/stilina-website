@@ -1,5 +1,5 @@
 import {useLoaderData} from "react-router-dom";
-import {ProductsGrid, ProductsList} from "../index.js";
+import {ProductsInnerContainer} from "../index.js";
 import {useState} from "react";
 import {BsFillGridFill, BsList} from "react-icons/bs";
 
@@ -46,9 +46,9 @@ const ProductContainer = () => {
                     Désolé, aucun produit ne correspond à votre recherche...
                 </h5>
             ) : layout === "grid" ? (
-                <ProductsGrid/>
+                <ProductsInnerContainer layout="grid"/>
             ) : (
-                <ProductsList/>
+                <ProductsInnerContainer layout="list"/>
             )}
         </div>
     </>
