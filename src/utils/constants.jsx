@@ -20,7 +20,7 @@ export const links = [
     {id: 6, url: "products", text: "Produits", sub_menus: ["stilina", "kangaro"]}
 ];
 
-export const product_url = "http://stilina-backend-dev.eba-32qdmrqn.ca-central-1.elasticbeanstalk.com/api";
+export const product_url = "https://stilina-api.zahirsoffi.xyz";
 export const my_product_url = "http://localhost:8080/api";
 
 export const customAxiosInstance = axios.create({
