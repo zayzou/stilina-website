@@ -14,10 +14,10 @@ function NavLinks() {
                             </summary>
                             <ul>
                                 <li className="capitalize">
-                                    <NavLink to={url}>Tout les produits</NavLink>
+                                    <a className="text-nowrap" href={url}>Tout les produits</a>
                                 </li>
                                 {sub_menus.map((menu) => <li className="capitalize" key={menu}>
-                                    <NavLink to={`${url}?brand=${menu.toUpperCase()}`}>{menu}</NavLink>
+                                    <a href={`${url}?brand=${menu.toUpperCase()}`}>{menu}</a>
                                 </li>)}
                             </ul>
                         </details> :
