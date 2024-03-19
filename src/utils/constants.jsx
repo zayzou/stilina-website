@@ -1,6 +1,7 @@
 import {FaFacebookF, FaYoutube, FaInstagram} from "react-icons/fa6";
 import axios from "axios";
 
+
 export const socials = (style) => {
     return [{
         id: 1, url: "https://www.twitter.com", icon: <FaFacebookF className={style}/>,
@@ -20,11 +21,11 @@ export const links = [
     {id: 6, url: "products", text: "Produits", sub_menus: ["stilina", "kangaro"]}
 ];
 
-export const product_url = "https://stilina-api.zahirsoffi.xyz";
+export const product_url = "https://stilina-api.zahirsoffi.xyz/api";
 export const my_product_url = "http://localhost:8080/api";
 
 export const customAxiosInstance = axios.create({
-    baseURL: product_url,
+    baseURL: my_product_url,
 });
 
 

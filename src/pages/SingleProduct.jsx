@@ -21,7 +21,7 @@ const SingleProduct = () => {
         description,
         brand,
         category,
-        packaging,
+        packagings,
         images,
         productVariants
     } = product
@@ -34,15 +34,15 @@ const SingleProduct = () => {
     // Drift config
 
     useEffect(() => {
-        if (images.length > 0) {
-            new Drift(document.querySelector(".drift-trigger"), {
-                paneContainer: document.querySelector(".details"),
-                inlinePane: 769,
-                inlineOffsetY: -85,
-                containInline: true,
-                hoverBoundingBox: true,
-            });
-        }
+
+        new Drift(document.querySelector(".drift-trigger"), {
+            paneContainer: document.querySelector(".details"),
+            inlinePane: 769,
+            inlineOffsetY: -85,
+            containInline: true,
+            hoverBoundingBox: true,
+        });
+
     });
 
     const handlePvSelect = (sku) => {
@@ -53,7 +53,7 @@ const SingleProduct = () => {
         <section>
             <Breadcrumbs/>
             <div className="mt-6 grid gap-y-8 md:grid-cols-2 md:gap-x-8 lg:gap-x-16 ">
-                {images.length > 0 && <ProductImages images={images} title={name}/>}
+                {<ProductImages images={images} title={name}/>}
                 <div className="details prose prose-sm md:prose-base">
                     <h1 className="m-0 md:m-0">{name} de {brand.name}</h1>
                     <h2 className="mt-2 md:mt-2">{category.name}</h2>
@@ -74,27 +74,47 @@ const SingleProduct = () => {
                             <FaCircleCheck className="text-success"/>Famille: {category.name}
                         </li>
                         <li className="flex items-center gap-2">
-                            <FaCircleCheck className="text-success"/>Emballage : {packaging.name}
+                            <FaCircleCheck className="text-success"/>Emballage :
                         </li>
                     </ul>
 
                     <Separator/>
                     <div className="mt-6" id="cart">
-                        <div>
-                            <h3 className="text-md font-medium tracking-wider capitalize col-span-1">
-                                Sous Emballage :
-                            </h3>
-                            <div className="mt-2 col-span-2">
-                                <select className="select select-bordered w-full max-w-xs"
-                                        onChange={(e) => handlePvSelect(e.target.value)}>
-                                    {productVariants.map((pv) => {
-                                        return (
-                                            <option key={pv.sku} value={pv.sku}>{pv.packaging.name}</option>
-                                        );
-                                    })}
-                                </select>
+                        <div className="grid grid-cols-2 gap-4 justify-center items-center">
+                            <div>
+                                <h3 className="text-md font-medium tracking-wider capitalize col-span-1">
+                                    Produit :
+                                </h3>
+                                <div className="mt-2 col-span-2">
+                                    <select className="select select-bordered w-full max-w-xs"
+                                            onChange={(e) => handlePvSelect(e.target.value)}>
+                                        {productVariants.map((pv) => {
+                                            return (
+                                                <option key={pv.sku} value={pv.sku}>{pv.packaging.name}</option>
+                                            );
+                                        })}
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 className="text-md font-medium tracking-wider capitalize col-span-1">
+                                    Emballage :
+                                </h3>
+
+                                {packagings.map((p) => {
+                                    return <div key={p.id} className="form-control">
+                                        <label className="label cursor-pointer">
+                                            <span className="label-text">{p.name}</span>
+                                            <input readOnly type="radio" name="radio-10"
+                                                   className="radio checked:bg-blue-500"
+                                                   checked/>
+                                        </label>
+                                    </div>
+                                })}
+
                             </div>
                         </div>
+
                         <div className="flex items-center mt-10 gap-4">
                             <div className="join rounded-box border-2 ">
                                 <button

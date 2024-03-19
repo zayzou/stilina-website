@@ -1,13 +1,13 @@
 import {useState} from "react";
 
 const ProductImages = ({images, title}) => {
-    const [image, setImage] = useState(images[0]);
+    const [image, setImage] = useState(images[0] ? images[0] : null);
 
     return (
         <section className="">
             <img
-                src={image.url}
-                data-zoom={image.url}
+                src={image?.url ? image.url : "https://picsum.photos/200/300"}
+                data-zoom={image?.url ? image.url : "https://picsum.photos/200/300"}
                 alt={`image de produit ${title}`}
                 className="h-[400px]  lg:w-full drift-trigger"
             />
