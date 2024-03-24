@@ -1,16 +1,14 @@
 import {useState} from "react";
-
+import placeholder from "../assets/images/placeholder2.webp"
+import placeholder2 from "../assets/images/placeholder.png"
 const ProductImages = ({images, title}) => {
     const [image, setImage] = useState(images[0] ? images[0] : null);
-    images[0] = {"url": "https://picsum.photos/200/300"}
-    images[1] = {"url": "https://picsum.photos/200/300"}
-    images[2] = {"url": "https://picsum.photos/200/300"}
-    images[3] = {"url": "https://picsum.photos/200/300"}
+    images[0] = {"url": placeholder2}
     return (
         <section className="">
             <img
-                src={image?.url ? image.url : "https://picsum.photos/200/300"}
-                data-zoom={image?.url ? image.url : "https://picsum.photos/200/300"}
+                src={image?.url ? image.url :placeholder}
+                data-zoom={image?.url ? image.url : placeholder}
                 alt={`image de produit ${title}`}
                 className="h-[400px]  lg:w-full drift-trigger"
             />

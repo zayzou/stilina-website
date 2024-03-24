@@ -117,9 +117,9 @@ const SingleProduct = () => {
 
                 </div>
                 <div className="divider col-span-3 text-2xl uppercase font-bold">Vous aimerez aussi</div>
-               <div className="col-span-3">
-                   <ProductsGrid/>
-               </div>
+                <div className="col-span-3">
+                    <ProductsGrid/>
+                </div>
             </div>
         </section>
     );
