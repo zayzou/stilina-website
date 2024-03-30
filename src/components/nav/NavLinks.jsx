@@ -16,8 +16,8 @@ function NavLinks() {
                                 <li className="capitalize">
                                     <a className="text-nowrap" href={url}>Tout les produits</a>
                                 </li>
-                                {sub_menus.map((menu) => <li className="capitalize" key={menu}>
-                                    <a href={`${url}?brand=${menu.toUpperCase()}`}>{menu}</a>
+                                {sub_menus.map((menu) => <li className="capitalize bg-transparent" key={menu}>
+                                    <a  href={`${url}?brand=${menu.toUpperCase()}`}  className="bg-transparent ">{menu}</a>
                                 </li>)}
                             </ul>
                         </details> :

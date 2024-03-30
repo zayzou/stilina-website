@@ -23,6 +23,7 @@ const SingleProduct = () => {
         name,
         description,
         brand,
+        codeArticle,
         category,
         packagings,
         images,
@@ -58,7 +59,7 @@ const SingleProduct = () => {
                             <h4 className="font-title font-bold text-2xl">{brand.name}</h4>
                             <h5 className="">{category.name}</h5>
                             <h6 className="text-md font-medium tracking-wider capitalize">
-                                Code article : <span className=" text-base">#####</span>
+                                Code article : <span className=" text-base">{codeArticle}</span>
                             </h6>
                             <h3 className="text-md font-medium tracking-wider capitalize">
                                 Description :
@@ -73,13 +74,7 @@ const SingleProduct = () => {
                                 <li className="flex items-center gap-2">
                                     <FaCircleCheck className="text-success"/>Famille: {category.name}
                                 </li>
-                                <li className="flex items-center gap-2">
-                                    <FaCircleCheck className="text-success" style={{marginTop: "inherit"}}/>
-                                    Couleurs :
-                                    <div className="badge mb-auto" style={{backgroundColor: "red"}}></div>
-                                    <div className="badge mb-auto" style={{backgroundColor: "blue"}}></div>
-                                    <div className="badge mb-auto" style={{backgroundColor: "green"}}></div>
-                                </li>
+
                             </ul>
                         </div>
                     </div>
